@@ -1,0 +1,573 @@
+@import url("ursine/code-dracula.css");
+
+/** FONT-FACES **/
+
+/*
+	Avenir Next LT Pro provided by Adrian Frutiger and Akira Kobayashi.
+	Downloaded from `https://www.cufonfonts.com/font/avenir-next-lt-pro`
+*/
+@font-face {
+	font-family: 'Avenir Next LT Pro';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Avenir Next LT Pro Regular'), url('./ursine/AvenirNextLTPro-Regular.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Avenir Next LT Pro';
+	font-style: italic;
+	font-weight: normal;
+	src: local('Avenir Next LT Pro It'), url('./ursine/AvenirNextLTPro-It.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Avenir Next LT Pro';
+	font-style: normal;
+	font-weight: bold;
+	src: local('Avenir Next LT Pro Demi'), url('./ursine/AvenirNextLTPro-Demi.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Avenir Next LT Pro';
+	font-style: italic;
+	font-weight: bold;
+	src: local('Avenir Next LT Pro DemiIt'), url('./ursine/AvenirNextLTPro-DemiIt.woff') format('woff');
+}
+
+/*
+	Adelle provided by Veronika Burian and Jos Scaglione
+	Downloaded from `https://www.cufonfonts.com/font/adelle`
+*/
+@font-face {
+font-family: 'Adelle';
+font-style: normal;
+font-weight: normal;
+src: local('Adelle Light'), url('./ursine/Adelle_light.woff') format('woff');
+}
+
+@font-face {
+font-family: 'Adelle';
+font-style: italic;
+font-weight: normal;
+src: local('Adelle Light Italic'), url('./ursine/Adelle_LightItalic.woff') format('woff');
+}
+
+@font-face {
+font-family: 'Adelle';
+font-style: normal;
+font-weight: bold;
+src: local('Adelle SemiBold'), url('./ursine/Adelle_Semibold.woff') format('woff');
+}
+
+@font-face {
+font-family: 'Adelle';
+font-style: italic;
+font-weight: bold;
+src: local('Adelle SemiBold Italic'), url('./ursine/Adelle_SemiBoldItalic.woff') format('woff');
+}
+
+/*
+	Cousine provided by Steve Matteson from Google Fonts
+	Downloaded from `https://fonts.google.com/specimen/Cousine`
+*/
+@font-face {
+  font-family: 'Cousine';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Cousine Regular'), url('./ursine/Cousine-Regular.woff') format('woff');
+}
+
+/** ROOT VARIABLES **/
+
+:root {
+   --bg-color:  #1e2022; /*change background*/
+   --text-color: #dddddd; /*change text color*/
+   --md-char-color: #5b5b5b; /*change color of meta characetrs like `*` in markdown */
+   --meta-content-color: #757575; /*change color of meta contents like image text or link address in markdown */
+	 --link-color: #6bcafb; /*change color of hyperlinks*/
+
+   --primary-color: #428bca; /* color of primary buttons */
+   --primary-btn-border-color: #285e8e;
+   --primary-btn-text-color: #fff;
+
+   --window-border: 1px solid #16161a; /*border for sidebar, etc*/
+
+   --active-file-bg-color: #16161a; /*background color if list item in file tree or file list*/
+   --active-file-text-color: inherit;
+   --active-file-border-color: #777;
+
+   --side-bar-bg-color: #2b2b2b; /*change background of sidebar*/
+   --item-hover-bg-color: var(--bg-color); /*background of control items when hover, like menu in sidebar*/
+   --item-hover-text-color: white; /* text color upon hovering over menu items */
+   --search-select-text-color: white; /* Text color for selected searched text */
+   --search-select-bg-color: #666; /* Background color for selected searched text */
+	 --rawblock-edit-panel-bd: #3c3c3c; /* Background color for inline HTML "edit panel" blocks */
+   --monospace: 'Cousine'; /*monospace font for codes, fences*/
+}
+
+/** TAGS **/
+
+html, body {
+	font-family: 'Avenir Next LT Pro', 'Lato', sans-serif;
+}
+
+body {
+	font-size: 14px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Adelle";
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin: 1rem 0;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin: 0.7rem 0;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+h4 {
+  font-size: 1.1rem;
+  margin: 0.2rem 0;
+}
+
+h5 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+h6 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
+a {
+	color: var(--link-color);
+}
+
+del {
+	color: var(--md-char-color);
+}
+
+mark {
+	padding: 2px 1px;
+	background: #fee405;
+}
+
+/* Custom list-style */
+#write ol,
+#write ul {
+	padding-left: 2rem;
+	margin: 0.5rem 0;
+}
+
+#write ol {
+	counter-reset: li;
+}
+
+#write ol > li,
+#write ul > li {
+	position: relative;
+	list-style: none;
+}
+
+#write ol > li::before,
+#write ul > li::before {
+	position: absolute;
+	color: var(--primary-color);
+}
+
+#write ol > li::before {
+	content: counter(li) ".";
+	counter-increment: li;
+	right: calc(100% + 0.5rem);
+}
+
+#write ul > li:not(.md-task-list-item)::before {
+	content: '•';
+	right: calc(100% + 0.7rem);
+	margin-top: 0.1rem;
+}
+
+#write .md-task-list-item {
+	transition: all 0.3s;
+}
+
+#write .md-task-list-item > input {
+	-webkit-appearance: initial;
+	display: block;
+	position: absolute;
+	border: 1px solid var(--md-char-color);
+	border-radius: 0.25rem;
+	margin-top: 0.1rem;
+	margin-left: -1.8rem;
+	height: 1.2rem;
+	width: 1.2rem;
+	transition: background 0.4s;
+}
+
+#write .md-task-list-item > input:focus {
+	outline: none;
+	box-shadow: none;
+}
+
+#write .md-task-list-item > input:hover {
+	background: #3c3c3c;
+}
+
+#write .task-list-done {
+	color: var(--md-char-color);
+	text-decoration: line-through;
+}
+
+#write .md-task-list-item > input[checked]::before {
+	content: '';
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	height: 60%;
+	width: 2px;
+	transform: rotate(40deg);
+	background: var(--text-color);
+}
+
+#write .md-task-list-item > input[checked]::after {
+	content: '';
+	position: absolute;
+	top: 46%;
+	left: 25%;
+	height: 30%;
+	width: 2px;
+	transform: rotate(-40deg);
+	background: var(--text-color);
+}
+
+blockquote {
+	margin: 1rem 0 1rem 2rem;
+	font-family: 'Adelle';
+}
+
+blockquote p::before {
+	content: "";
+	position: absolute;
+	left: -2rem;
+	height: 100%;
+	width: 0.25rem;
+	background: var(--primary-color);
+}
+
+blockquote p:not(:last-child):before {
+	height: calc(100% + 1rem);
+}
+
+code, .md-fences, tt {
+  font-family: 'Cousine', monospace;
+  font-size: 1rem;
+}
+
+code {
+	border: 1px solid #3c3c3c;
+	border-radius: 0.25rem;
+	padding: 0 0.125rem;
+}
+
+/* Code auto-suggest list menu */
+#fences-auto-suggest .active {
+	background: #3c3c3c;
+}
+
+hr {
+	border-color: var(--md-char-color);
+}
+
+/* YAML */
+pre.md-meta-block {
+  background-color: transparent;
+	border-bottom: 1px solid var(--md-char-color);
+	padding-bottom: 1rem;
+	opacity: 0.8;
+}
+
+/* Tables */
+table {
+	border: 1px solid var(--md-char-color);
+	margin: 1rem 0;
+}
+
+thead {
+	background: #4d4d4d;
+}
+
+table tr:nth-child(2n) {
+	background: #3c3c3c;
+}
+
+td, th {
+	padding: 0.35rem 0.7rem;
+	border: 1px solid var(--md-char-color);
+}
+
+/* Table toolbar */
+.md-table-edit {
+	border-top: 1px solid var(--meta-content-color);
+	margin-top: -29px !important;
+	padding: 3px 0;
+}
+
+/* Table drag areas */
+.typora-table-drag-area::after {
+	content: '';
+	position: absolute;
+	border: 2px solid var(--text-color);
+	opacity: 0;
+	transition: opacity 0.4s;
+}
+
+#typora-table-row-tracker .typora-table-drag-area::after {
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 0;
+	height: 100%;
+}
+
+#typora-table-col-tracker .typora-table-drag-area::after {
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	width: 100%;
+	height: 0;
+}
+
+#typora-table-row-tracker .typora-table-drag-area:hover::after,
+#typora-table-col-tracker .typora-table-drag-area:hover::after {
+	opacity: 1;
+}
+
+/* Table of contents */
+.md-toc-tooltip {
+	z-index: 10
+}
+
+span.md-toc-item {
+	font-size: 1.1rem;
+	color: var(--primary-btn-border-color);
+}
+
+span.md-toc-h1 {
+	font-family: "Adelle";
+	font-size: 1.3rem;
+}
+
+span.md-toc-h2 {
+	font-size: 1.2rem;
+}
+
+/* Footnote */
+sup.md-footnote {
+	font-family: "Adelle";
+	font-size: 0.8rem;
+	padding: 0 4px;
+}
+
+span.md-def-split {
+	min-width: 1ch;
+}
+
+.md-def-name::before,
+.md-def-name::after {
+	color: var(--meta-content-color);
+}
+
+/* Writing area */
+#write {
+  width: 90%;
+  max-width: 700px;
+}
+
+/* Fill whole width of container */
+#write h1,
+#write h2,
+#write h3,
+#write h4,
+#write h5,
+#write h6,
+#write p,
+#write pre {
+	width: auto;
+}
+
+/* Header prefix symbol */
+
+/* Disable default header symbol */
+#write h3.md-focus::before,
+#write h4.md-focus::before,
+#write h5.md-focus::before,
+#write h6.md-focus::before {
+	border: none;
+	border-radius: 0;
+	left: auto;
+	float: none;
+	padding: 0;
+	vertical-align: baseline;
+	line-height: 20px;
+}
+
+#write h1::before,
+#write h2::before,
+#write h3::before,
+#write h4::before,
+#write h5::before,
+#write h6::before {
+	position: absolute;
+	top: 0;
+	right: calc(100% + 10px);
+	color: var(--md-char-color);
+	font-size: 1rem;
+	font-weight: bold;
+	font-variant: "small-caps";
+}
+
+#write h1::before {
+	content: "H1";
+	top: 0.7rem;
+}
+
+#write h2::before {
+	content: "H2";
+	top: 0.37rem;
+}
+
+#write h3::before {
+	content: "H3";
+	top: 0.15rem;
+}
+
+#write h4::before {
+	content: "H4";
+}
+
+#write h5::before {
+	content: "H5";
+}
+
+#write h6::before {
+	content: "H6";
+}
+
+/* Image meta text */
+#write .md-image > .md-meta {
+	color: var(--meta-content-color);
+}
+
+/* Inline styles */
+.md-rawblock-tooltip {
+	top: -1.5rem;
+	height: 1.5rem;
+	padding: 0.25rem;
+}
+
+/* Search results */
+md-search-hit {
+	background: rgba(105, 176, 248, 0.3);
+}
+
+/* Focus mode */
+.on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) *,
+.on-focus-mode pre.md-end-block:not(.md-focus):not(.md-focus-container) {
+	color: var(--md-char-color) !important;
+}
+
+.on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) img,
+.on-focus-mode blockquote .md-end-block:not(.md-focus):not(.md-focus-container)::before,
+.on-focus-mode li:not(.md-focus-container)::before {
+	opacity: 0.5;
+}
+
+.on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) mark {
+	background: #3c3c3c;
+}
+
+/* UI Sidebar */
+#typora-sidebar {
+	border-right: 1px solid #19191c;
+}
+
+.sidebar-tabs {
+	font-family: 'Adelle';
+	border-bottom: 1px solid black;
+}
+
+.file-list-item-file-name {
+	font-family: "Adelle";
+	font-size: 1.2rem;
+}
+
+#file-library-search .file-list-item-file-name {
+	font-size: 1.1rem;
+}
+
+.file-list-item-summary,
+.ty-search-item-line {
+	font-family: "Avenir Next LT Pro", "Lato", sans-serif;
+}
+
+.ty-file-search-match-text {
+	font-weight: bold;
+	background: transparent;
+}
+
+#outline-content .outline-h1 > .outline-item {
+	font-family: "Adelle";
+}
+
+.file-library-node,
+.file-library-node .file-node-background {
+	transition: background 0.4s;
+}
+
+.file-tree-node.file-library-file-node:not(.active):hover .file-node-background,
+.file-list-item.file-library-node:not(.active):hover {
+	background: var(--item-hover-bg-color);
+}
+
+.file-tree-node.file-library-file-node.active .file-node-background,
+.file-list-item.file-library-file-node.active {
+	border-left: 5px solid var(--primary-color);
+}
+
+/* Remove blinking animation when updating filename */
+.blink-area {
+	animation: none;
+}
+
+#ty-sidebar-footer {
+	border-top: 1px solid black;
+}
+
+.sidebar-footer-item {
+	transition: background 0.3s;
+}
+
+.outline-title-wrapper,
+.outline-item-wrapper.outline-h1 > .outline-item {
+	font-family: "Adelle";
+	font-weight: bold;
+}

@@ -86,9 +86,10 @@ src: local('Adelle SemiBold Italic'), url('./ursine/Adelle_SemiBoldItalic.woff')
    --meta-content-color: #757575; /*change color of meta contents like image text or link address in markdown */
 	 --link-color: #6bcafb; /*change color of hyperlinks*/
 
-   --primary-color: #428bca; /* color of primary buttons */
+   --primary-color: #428bca; /* primary color */
    --primary-btn-border-color: #285e8e;
    --primary-btn-text-color: #fff;
+	 --accent-color: #3c3c3c;		/* background accent color */
 
    --window-border: 1px solid #16161a; /*border for sidebar, etc*/
 
@@ -101,7 +102,7 @@ src: local('Adelle SemiBold Italic'), url('./ursine/Adelle_SemiBoldItalic.woff')
    --item-hover-text-color: white; /* text color upon hovering over menu items */
    --search-select-text-color: white; /* Text color for selected searched text */
    --search-select-bg-color: #666; /* Background color for selected searched text */
-	 --rawblock-edit-panel-bd: #3c3c3c; /* Background color for inline HTML "edit panel" blocks */
+	 --rawblock-edit-panel-bd: var(--accent-color); /* Background color for inline HTML "edit panel" blocks */
    --monospace: 'Cousine'; /*monospace font for codes, fences*/
 }
 
@@ -229,7 +230,7 @@ mark {
 }
 
 #write .md-task-list-item > input:hover {
-	background: #3c3c3c;
+	background: var(--accent-color);
 }
 
 #write .task-list-done {
@@ -283,14 +284,14 @@ code, .md-fences, tt {
 }
 
 code {
-	border: 1px solid #3c3c3c;
+	border: 1px solid var(--accent-color);
 	border-radius: 0.25rem;
 	padding: 0 0.125rem;
 }
 
 /* Code auto-suggest list menu */
 #fences-auto-suggest .active {
-	background: #3c3c3c;
+	background: var(--accent-color);
 }
 
 hr {
@@ -316,7 +317,7 @@ thead {
 }
 
 table tr:nth-child(2n) {
-	background: #3c3c3c;
+	background: var(--accent-color);
 }
 
 td, th {
@@ -502,7 +503,7 @@ md-search-hit {
 }
 
 .on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) mark {
-	background: #3c3c3c;
+	background: var(--accent-color);
 }
 
 /* UI Sidebar */

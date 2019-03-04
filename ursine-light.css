@@ -1,0 +1,59 @@
+@import url("ursine-dark.css");
+@import url("ursine/code-3024-day.css");
+
+/** ROOT VARIABLES **/
+:root {
+  --bg-color: #fbfbfb; /*change background*/
+  --text-color: #333333; /*change text color*/
+  --md-char-color: #b4b4b4; /*change color of meta characetrs like `*` in markdown */
+  --meta-content-color: #757575; /*change color of meta contents like image text or link address in markdown */
+  --link-color: #db4d52; /*change color of hyperlinks*/
+
+  --primary-color: #db4d52; /* primary color */
+  --primary-btn-border-color: #be2f34;
+  --primary-btn-text-color: #000;
+  --accent-color: #d0d0d0; /* background accent color */
+
+  --window-border: 1px solid #16161a; /*border for sidebar, etc*/
+
+  --active-file-bg-color: #16161a; /*background color if list item in file tree or file list*/
+  --active-file-text-color: inherit;
+  --active-file-border-color: #777;
+
+  --side-bar-bg-color: #2e3235; /* change background of sidebar*/
+  --item-hover-bg-color: #202020; /* background of control items when hover, like menu in sidebar*/
+  --item-hover-text-color: white; /* text color upon hovering over menu items */
+  --search-select-text-color: white; /* Text color for selected searched text */
+  --search-select-bg-color: #666; /* Background color for selected searched text */
+  --rawblock-edit-panel-bd: var(--accent-color); /* Background color for inline HTML "edit panel" blocks */
+  --monospace: "Cousine"; /*monospace font for codes, fences*/
+}
+
+/** TAGS **/
+
+mark {
+  background: #adfe96;
+}
+
+code {
+  background: #f7f7f7;
+}
+
+/* Tables */
+thead {
+  background: #d0d0d0;
+}
+
+table tr:nth-child(2n) {
+  background: #e0e0e0;
+}
+
+/* Footnote */
+sup.md-footnote {
+  background: #dddddd;
+}
+
+/* Sidebar */
+#typora-sidebar * {
+  color: var(--bg-color);
+}

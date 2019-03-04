@@ -13,7 +13,10 @@
   background: #f7f7f7 !important;
   color: #3a3432 !important;
 }
-.cm-s-inner div.CodeMirror-selected { background: #d6d5d4; }
+
+.cm-s-inner .CodeMirror-cursor {
+  border-left: solid thin #3a3432 !important;
+}
 
 .cm-s-inner .CodeMirror-line::selection, .cm-s-inner .CodeMirror-line > span::selection, .cm-s-inner .CodeMirror-line > span > span::selection { background: #d6d5d4; }
 .cm-s-inner .CodeMirror-line::-moz-selection, .cm-s-inner .CodeMirror-line > span::-moz-selection, .cm-s-inner .CodeMirror-line > span > span::selection { background: #d9d9d9; }
@@ -46,5 +49,5 @@
 .cm-s-inner .CodeMirror-matchingbracket { text-decoration: underline; color: #a16a94 !important; }
 
 .CodeMirror-selectedtext, .CodeMirror-selected {
-
+  background: #f4dbdb !important;
 }

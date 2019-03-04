@@ -22,13 +22,12 @@
   width: 5ch;
   color: #282a36;
 }
-.cm-s-inner .CodeMirror-cursor { border-left: solid thin #f8f8f0 !important; }
+.cm-s-inner .CodeMirror-cursor { border-left: solid thin #f8f8f2 !important; }
 .cm-s-inner .CodeMirror-linenumber {
   width: 4ch !important;
   color: #6D8A88;
 }
 
-.cm-s-inner .CodeMirror-selected { background: rgba(255, 255, 255, 0.10); }
 .cm-s-inner .CodeMirror-line::selection,
 .cm-s-inner .CodeMirror-line > span::selection,
 .cm-s-inner .CodeMirror-line > span > span::selection { background: rgba(255, 255, 255, 0.10); }

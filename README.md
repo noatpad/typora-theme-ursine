@@ -1,12 +1,12 @@
 # Ursine
 
-A Typora theme inspired by Bear
+A theme for the wonderful [Typora](https://typora.io), inspired by [Bear](https://bear.app)'s colors and elegancy.
 
 ![thumbnail](thumbnail.png)
 
 Uses *Avenir Next LT Pro* and *Adelle* fonts, & the colors are based on Bear's *Red Graphite* and *Dark Graphite* themes.
 
-Code fence themes adapted from CodeMirror's *3024 Day* and *Dracula* themes for Ursine Polar and Umbra, respectively.
+Code fence themes are adapted from CodeMirror's *3024 Day* and *Dracula* themes for Ursine Polar and Umbra, respectively.
 
 > Note: These themes have been designed and tested on **MacOS**. They have not been fully tested, but they should theoretically work fine for Windows and Linux. However, these themes do *not* include styling for the Windows *"unibody"* style.
 

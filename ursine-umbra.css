@@ -527,6 +527,10 @@ md-search-hit {
   font-size: 1.2rem;
 }
 
+input.file-list-item-file-name, input.file-tree-rename-input {
+  background: var(--side-bar-bg-color);
+}
+
 #file-library-search .file-list-item-file-name {
   font-size: 1.1rem;
 }

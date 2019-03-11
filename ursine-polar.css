@@ -19,6 +19,7 @@
   --active-file-bg-color: #16161a; /*background color if list item in file tree or file list*/
   --active-file-text-color: inherit;
   --active-file-border-color: #777;
+  --active-search-item-bg-color: #23242b;
 
   --side-bar-bg-color: #2e3235; /* change background of sidebar*/
   --item-hover-bg-color: #202020; /* background of control items when hover, like menu in sidebar*/

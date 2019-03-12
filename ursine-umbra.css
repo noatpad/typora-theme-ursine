@@ -540,6 +540,10 @@ input.file-list-item-file-name, input.file-tree-rename-input {
   background: var(--active-search-item-bg-color);
 }
 
+#file-library-search-input {
+  background: var(--side-bar-bg-color);
+}
+
 .file-list-item-summary,
 .ty-search-item-line {
   font-family: "Avenir Next LT Pro", "Lato", sans-serif;

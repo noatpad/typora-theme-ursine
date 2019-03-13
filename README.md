@@ -2,13 +2,15 @@
 
 A theme for the wonderful [Typora](https://typora.io), inspired by [Bear](https://bear.app)'s colors and elegancy.
 
-![thumbnail](thumbnail.png)
+![thumbnail](images/thumbnail.png)
 
 Uses *Avenir Next LT Pro* and *Adelle* fonts, & the colors are based on Bear's *Red Graphite* and *Dark Graphite* themes.
 
 Code fence themes are adapted from CodeMirror's *3024 Day* and *Dracula* themes for Ursine Polar and Umbra, respectively.
 
-> Note: These themes have been designed and tested on **MacOS**. They have not been fully tested, but they should theoretically work fine for Windows and Linux. However, these themes do *not* include styling for the Windows *"unibody"* style.
+> Note: These themes have been designed and tested on **MacOS** and *partially on Windows*. They have not been fully tested, but they should theoretically work fine for Windows and Linux.
+
+> *Now with unibody styling!*
 
 ## Installation
 
@@ -16,20 +18,24 @@ Decompress the latest release from [here](https://github.com/aCluelessDanny/typo
 
 ## Ursine Polar
 
-![Polar Preview 1](polar-1.png)
+![Polar Preview 1](images/polar-1.png)
 
-![Polar Preview 2](polar-2.png)
+![Polar Preview 2](images/polar-2.png)
 
-![Polar Preview 3](polar-3.png)
+![Polar Preview 3](images/polar-3.png)
 
-![Polar Source Code Preview](polar-source.png)
+![Polar Source Code Preview](images/polar-source.png)
+
+![Polar Unibody Preview](images/polar-unibody.png)
 
 ## Ursine Umbra
 
-![Umbra Preview 1](umbra-1.png)
+![Umbra Preview 1](images/umbra-1.png)
 
-![Umbra Preview 2](umbra-2.png)
+![Umbra Preview 2](images/umbra-2.png)
 
-![Umbra Preview 3](umbra-3.png)
+![Umbra Preview 3](images/umbra-3.png)
 
-![Umbra Source Code Preview](umbra-source.png)
+![Umbra Source Code Preview](images/umbra-source.png)
+
+![Umbra Unibody Preview](images/umbra-unibody.png)

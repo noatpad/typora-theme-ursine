@@ -80,23 +80,23 @@
 /** ROOT VARIABLES **/
 
 :root {
-  --bg-color: #1e2022; /*change background*/
-  --text-color: #dddddd; /*change text color*/
-  --md-char-color: #5b5b5b; /*change color of meta characetrs like `*` in markdown */
-  --meta-content-color: #757575; /*change color of meta contents like image text or link address in markdown */
-  --link-color: #6bcafb; /*change color of hyperlinks*/
+  --bg-color: #1e2022; /* change background */
+  --text-color: #dddddd; /* change text color */
+  --md-char-color: #5b5b5b; /* change color of meta characetrs like `*` in markdown */
+  --meta-content-color: #757575; /* change color of meta contents like image text or link address in markdown */
+  --link-color: #6bcafb; /* change color of hyperlinks */
 
   --primary-color: #428bca; /* primary color */
-  --primary-btn-border-color: #285e8e;
-  --primary-btn-text-color: #fff;
+  --primary-btn-border-color: #285e8e; /* primary color for buttons */
+  --primary-btn-text-color: #fff; /* primary text color for buttons */
   --accent-color: #3c3c3c; /* background accent color */
 
-  --window-border: 1px solid #16161a; /*border for sidebar, etc*/
+  --window-border: 1px solid #16161a; /* border for sidebar, etc*/
 
-  --active-file-bg-color: #16161a; /*background color if list item in file tree or file list*/
-  --active-file-text-color: inherit;
-  --active-file-border-color: #777;
-  --active-search-item-bg-color: #212121;
+  --active-file-bg-color: #16161a; /* background color if list item in file tree or file list*/
+  --active-file-text-color: inherit; /* text color for selected file */
+  --active-file-border-color: #777; /* border color for selected file */
+  --active-search-item-bg-color: #212121; /* background color for active search item */
 
   --side-bar-bg-color: #2b2b2b; /* change background of sidebar*/
   --item-hover-bg-color: var(--bg-color); /* background of control items when hover, like menu in sidebar*/
@@ -104,15 +104,15 @@
   --search-select-text-color: white; /* Text color for selected searched text */
   --search-select-bg-color: #666; /* Background color for selected searched text */
   --rawblock-edit-panel-bd: var(--accent-color); /* Background color for inline HTML "edit panel" blocks */
-  --monospace: "Cousine"; /*monospace font for codes, fences*/
+  --monospace: "Cousine"; /* monospace font for codes, fences */
 
-  --megamenu-bg-color: var(--side-bar-bg-color);
-  --megamenu-sidebar-bg-color: var(--bg-color);
-  --megamenu-sidebar-hover-bg-color: #161819;
-  --megamenu-sidebar-active-bg-color: #101010;
-  --megamenu-button-border-color: #9292928f;
-  --megamenu-item-hover-bg-color: var(--bg-color);
-  --megamenu-item-hover-text-color: white;
+  --megamenu-bg-color: var(--side-bar-bg-color); /* background color for unibody megamenu */
+  --megamenu-sidebar-bg-color: var(--bg-color); /* background color for megamenu sidebar */
+  --megamenu-sidebar-hover-bg-color: #161819; /* background color for hovering megamenu sidebar items */
+  --megamenu-sidebar-active-bg-color: #101010; /* background color for active megamenu sidebar items */
+  --megamenu-button-border-color: #9292928f; /* background color for megamenu buttons */
+  --megamenu-item-hover-bg-color: var(--bg-color); /* background color for hovering megamenu items */
+  --megamenu-item-hover-text-color: white; /* text color for hovering megamenu items */
 }
 
 /** TAGS **/

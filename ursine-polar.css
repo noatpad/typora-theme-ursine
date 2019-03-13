@@ -28,6 +28,14 @@
   --search-select-bg-color: #666; /* Background color for selected searched text */
   --rawblock-edit-panel-bd: var(--accent-color); /* Background color for inline HTML "edit panel" blocks */
   --monospace: "Cousine"; /*monospace font for codes, fences*/
+
+  --megamenu-bg-color: var(--bg-color);
+  --megamenu-sidebar-bg-color: var(--side-bar-bg-color);
+  --megamenu-sidebar-hover-bg-color: #161819;
+  --megamenu-sidebar-active-bg-color: #101010;
+  --megamenu-button-border-color: #9292928f;
+  --megamenu-item-hover-bg-color: #e6e6e6;
+  --megamenu-item-hover-text-color: #222222;
 }
 
 /** TAGS **/
@@ -46,7 +54,7 @@ thead {
 }
 
 table tr:nth-child(2n) {
-  background: #e0e0e0;
+  background: #e6e6e6;
 }
 
 /* Footnote */
@@ -57,4 +65,9 @@ sup.md-footnote {
 /* Sidebar */
 #typora-sidebar * {
   color: var(--bg-color);
+}
+
+/* Windows Unibody sidebar */
+#megamenu-menu-sidebar, .megamenu-menu-list li:not(.saved) a:not(.active):hover, .megamenu-menu-list li a.active {
+  color: var(--bg-color) !important;
 }

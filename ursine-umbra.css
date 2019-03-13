@@ -105,6 +105,14 @@
   --search-select-bg-color: #666; /* Background color for selected searched text */
   --rawblock-edit-panel-bd: var(--accent-color); /* Background color for inline HTML "edit panel" blocks */
   --monospace: "Cousine"; /*monospace font for codes, fences*/
+
+  --megamenu-bg-color: var(--side-bar-bg-color);
+  --megamenu-sidebar-bg-color: var(--bg-color);
+  --megamenu-sidebar-hover-bg-color: #161819;
+  --megamenu-sidebar-active-bg-color: #101010;
+  --megamenu-button-border-color: #9292928f;
+  --megamenu-item-hover-bg-color: var(--bg-color);
+  --megamenu-item-hover-text-color: white;
 }
 
 /** TAGS **/
@@ -554,6 +562,10 @@ input.file-list-item-file-name, input.file-tree-rename-input {
   background: transparent;
 }
 
+#outline-content {
+  line-height: 1.4em;
+}
+
 #outline-content .outline-h1 > .outline-item {
   font-family: "Adelle";
 }
@@ -590,4 +602,119 @@ input.file-list-item-file-name, input.file-tree-rename-input {
 .outline-item-wrapper.outline-h1 > .outline-item {
   font-family: "Adelle";
   font-weight: bold;
+}
+
+/* Windows Unibody */
+footer.ty-footer {
+  border-top: 0;
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 2px var(--primary-color);
+}
+
+/* Windows Unibody megamenu */
+.megamenu-opened header {
+  background-image: none;
+}
+
+#top-titlebar, #top-titlebar * {
+  color: inherit;
+}
+
+#megamenu-content {
+  padding-top: 28px;
+  background: var(--megamenu-bg-color);
+  color: var(--text-color);
+}
+
+.megamenu-menu-panel:not(:first-of-type) {
+  margin-top: 48px;
+}
+
+#megamenu-content .long-btn {
+  border-color: var(--megamenu-button-border-color);
+  transition: all 0.4s;
+}
+
+#megamenu-content .long-btn:hover {
+  border-color: var(--primary-color);
+  background: var(--megamenu-item-hover-bg-color);
+  color: var(--megamenu-item-hover-text-color) !important;
+}
+
+#recent-file-panel-action-btn {
+  background: inherit;
+  border-color: var(--megamenu-button-border-color);
+  transition: all 0.4s;
+}
+
+#recent-file-panel-action-btn:hover {
+  border-color: var(--primary-color);
+  background: var(--megamenu-item-hover-bg-color);
+  color: var(--megamenu-item-hover-text-color);
+}
+
+#recent-document-table {
+  border: 1px solid var(--accent-color);
+}
+
+#recent-file-panel tbody tr:nth-child(2n-1) {
+  background-color: inherit;
+}
+
+#recent-file-panel tbody tr:hover {
+  background-color: var(--megamenu-item-hover-bg-color) !important;
+}
+
+#recent-file-panel tbody tr:hover td:nth-child(1) {
+  color: var(--megamenu-item-hover-text-color);
+}
+
+/* Windows Unibody sidebar */
+#megamenu-menu-sidebar {
+  background: var(--megamenu-sidebar-bg-color);
+  color: var(--text-color);
+}
+
+.megamenu-menu-header, .megamenu-menu-list li:not(.saved) a {
+  transition: all 0.4s;
+}
+
+.megamenu-menu-header {
+  border-bottom: var(--window-border);
+}
+
+.megamenu-menu-header:hover, .megamenu-menu-list li:not(.saved) a:not(.active):hover {
+  background: var(--megamenu-sidebar-hover-bg-color);
+}
+
+.megamenu-menu-list li a.active {
+  background: var(--megamenu-sidebar-active-bg-color) !important;
+}
+
+#m-saved {
+  background: inherit;
+  color: inherit;
+}
+
+#megamenu-menu-list {
+  margin: 0;
+}
+
+.theme-preview-div {
+  transition: all 0.4s;
+}
+
+.theme-preview-div:hover {
+  border: 4px solid var(--primary-btn-border-color);
+}
+
+.theme-preview-div.active, .theme-preview-div.active:hover {
+  border: 4px solid var(--primary-color);
+}
+
+.theme-preview-div.active i {
+  color: var(--primary-color);
 }

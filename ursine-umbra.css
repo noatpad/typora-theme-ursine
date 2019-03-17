@@ -195,6 +195,10 @@ mark {
   margin: 0.5rem 0;
 }
 
+#write ul {
+  list-style-type: disc;
+}
+
 #write ol > li,
 #write ul > li {
   color: var(--primary-color);

@@ -236,7 +236,7 @@ mark {
   background: var(--accent-color);
 }
 
-#write .task-list-done {
+#write .md-task-list-item.task-list-done > p {
   color: var(--md-char-color);
   text-decoration: line-through;
 }

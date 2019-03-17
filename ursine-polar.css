@@ -24,8 +24,9 @@
   --side-bar-bg-color: #2e3235; /* change background of sidebar*/
   --item-hover-bg-color: #202020; /* background of control items when hover, like menu in sidebar*/
   --item-hover-text-color: white; /* text color upon hovering over menu items */
-  --search-select-text-color: white; /* Text color for selected searched text */
-  --search-select-bg-color: #666; /* Background color for selected searched text */
+  --search-hit-bg-color: #db4d5230;
+  --search-select-text-color: var(--text-color); /* Text color for selected searched text */
+  --search-select-bg-color: #db4d5270; /* Background color for selected searched text */
   --rawblock-edit-panel-bd: var(--accent-color); /* Background color for inline HTML "edit panel" blocks */
   --monospace: "Cousine"; /* monospace font for codes, fences */
 

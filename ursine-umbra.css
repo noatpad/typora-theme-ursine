@@ -101,8 +101,9 @@
   --side-bar-bg-color: #2b2b2b; /* change background of sidebar*/
   --item-hover-bg-color: var(--bg-color); /* background of control items when hover, like menu in sidebar*/
   --item-hover-text-color: white; /* text color upon hovering over menu items */
-  --search-select-text-color: white; /* Text color for selected searched text */
-  --search-select-bg-color: #666; /* Background color for selected searched text */
+  --search-hit-bg-color: #428bca40;
+  --search-select-text-color: var(--text-color); /* Text color for selected searched text */
+  --search-select-bg-color: #428bca90; /* Background color for selected searched text */
   --rawblock-edit-panel-bd: var(--accent-color); /* Background color for inline HTML "edit panel" blocks */
   --monospace: "Cousine"; /* monospace font for codes, fences */
 
@@ -417,7 +418,6 @@ span.md-def-split {
 }
 
 /* Header prefix symbol */
-
 /* Disable default header symbol */
 #write h3.md-focus::before,
 #write h4.md-focus::before,
@@ -487,8 +487,15 @@ span.md-def-split {
 }
 
 /* Search results */
-md-search-hit {
-  background: rgba(105, 176, 248, 0.3);
+.md-search-hit {
+  background: var(--search-hit-bg-color);
+  border-radius: 0.125em;
+}
+
+.md-search-select {
+  background: var(--search-select-bg-color);
+  border: 1px solid var(--megamenu-button-border-color);
+  padding: 0 1px;
 }
 
 /* Focus mode */

@@ -194,32 +194,15 @@ mark {
   margin: 0.5rem 0;
 }
 
-#write ol {
-  counter-reset: li;
-}
-
 #write ol > li,
 #write ul > li {
-  position: relative;
-  list-style: none;
-}
-
-#write ol > li::before,
-#write ul > li::before {
-  position: absolute;
   color: var(--primary-color);
+  padding-left: 0.25em;
 }
 
-#write ol > li::before {
-  content: counter(li) ".";
-  counter-increment: li;
-  right: calc(100% + 0.5rem);
-}
-
-#write ul > li:not(.md-task-list-item)::before {
-  content: "•";
-  right: calc(100% + 0.7rem);
-  margin-top: 0.1rem;
+#write ol li > *,
+#write ul li > * {
+  color: var(--text-color);
 }
 
 #write .md-task-list-item {

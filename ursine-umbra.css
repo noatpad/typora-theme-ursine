@@ -552,7 +552,8 @@ input.file-list-item-file-name, input.file-tree-rename-input {
   font-family: "Avenir Next LT Pro", "Lato", sans-serif;
 }
 
-.ty-file-search-match-text {
+.ty-file-search-match-text,
+.ty-outline-hit {
   font-weight: bold;
   background: transparent;
 }

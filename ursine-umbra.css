@@ -592,6 +592,15 @@ input.file-list-item-file-name, input.file-tree-rename-input {
   font-weight: bold;
 }
 
+/* Windows-specific */
+/* Context menu */
+ul.dropdown-menu li.active a,
+ul.dropdown-menu li.has-extra-menu.active a,
+ul.dropdown-menu li.has-btn-submenu a.menu-style-btn.active {
+  background: var(--accent-color) !important;
+  color: var(--text-color) !important;
+}
+
 /* Windows Unibody */
 footer.ty-footer {
   border-top: 0;

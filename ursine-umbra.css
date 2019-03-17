@@ -604,8 +604,8 @@ input.file-list-item-file-name, input.file-tree-rename-input {
 ul.dropdown-menu li.active a,
 ul.dropdown-menu li.has-extra-menu.active a,
 ul.dropdown-menu li.has-btn-submenu a.menu-style-btn.active {
-  background: var(--accent-color) !important;
-  color: var(--text-color) !important;
+  background: var(--text-color) !important;
+  color: var(--bg-color) !important;
 }
 
 /* Windows Unibody */

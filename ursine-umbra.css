@@ -600,10 +600,14 @@ input.file-list-item-file-name, input.file-tree-rename-input {
 }
 
 /* Windows-specific */
-/* Context menu */
+/* Context and dropdown menus */
 ul.dropdown-menu li.active a,
 ul.dropdown-menu li.has-extra-menu.active a,
-ul.dropdown-menu li.has-btn-submenu a.menu-style-btn.active {
+ul.dropdown-menu li.has-btn-submenu a.menu-style-btn.active,
+#footer-word-count-info .ty-footer-word-count-all tr:hover,
+#ty-spell-check-dict-missing-menu li:hover,
+.ty-spell-check-panel-item.ty-active,
+.ty-spell-check-panel-item:hover {
   background: var(--text-color) !important;
   color: var(--bg-color) !important;
 }
@@ -611,6 +615,11 @@ ul.dropdown-menu li.has-btn-submenu a.menu-style-btn.active {
 /* Windows Unibody */
 footer.ty-footer {
   border-top: 0;
+}
+
+.footer-item:hover {
+  background: var(--text-color) !important;
+  color: var(--bg-color) !important;
 }
 
 .form-control:focus {

@@ -736,3 +736,11 @@ footer.ty-footer {
 .theme-preview-div.active i {
   color: var(--primary-color);
 }
+
+/* Print/PDF */
+@media print {
+  #write ol > li,
+  #write ul > li {
+    color: var(--text-color);
+  }
+}

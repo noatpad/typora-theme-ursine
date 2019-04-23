@@ -352,6 +352,24 @@ th {
   color: var(--table-border-color);
 }
 
+.btn-group .btn + .btn {
+  margin-left: 0;
+}
+
+.btn-default.active,
+.btn-default.focus,
+.btn-default:active,
+.btn-default:focus,
+.btn-default:hover,
+.open > .dropdown-toggle.btn-default {
+  background: transparent;
+  color: inherit;
+}
+
+.btn-default.md-table-more:hover {
+  border: 1px solid #adadad;
+}
+
 /* Table drag areas */
 .typora-table-drag-area::after {
   content: "";

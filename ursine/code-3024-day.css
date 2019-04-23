@@ -49,5 +49,6 @@
 .cm-s-inner .CodeMirror-matchingbracket { text-decoration: underline; color: #a16a94 !important; }
 
 .CodeMirror-selectedtext, .CodeMirror-selected {
-  background: #f4dbdb !important;
+  background: #d5e2f4 !important;
+  color: inherit;
 }

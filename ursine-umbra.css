@@ -124,44 +124,44 @@ body {
 }
 
 body {
-  font-size: 14px;
+  font-size: 1em;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+#write h1,
+#write h2,
+#write h3,
+#write h4,
+#write h5,
+#write h6 {
   font-family: "Adelle";
 }
 
-h1 {
+#write h1 {
   font-size: 1.8rem;
   margin: 1rem 0;
 }
 
-h2 {
+#write h2 {
   font-size: 1.4rem;
   margin: 0.7rem 0;
 }
 
-h3 {
+#write h3 {
   font-size: 1.2rem;
   margin: 0.5rem 0;
 }
 
-h4 {
+#write h4 {
   font-size: 1.1rem;
   margin: 0.2rem 0;
 }
 
-h5 {
+#write h5 {
   font-size: 1rem;
   margin: 0;
 }
 
-h6 {
+#write h6 {
   font-size: 1rem;
   margin: 0;
 }
@@ -538,7 +538,7 @@ span.md-def-split {
 
 .file-list-item-file-name {
   font-family: "Adelle";
-  font-size: 1.2rem;
+  font-size: 1.2em;
 }
 
 input.file-list-item-file-name, input.file-tree-rename-input {

@@ -300,11 +300,6 @@ code {
   background: transparent;
 }
 
-/* Code auto-suggest list menu */
-#fences-auto-suggest .active {
-  background: var(--accent-color);
-}
-
 hr {
   border-color: var(--md-char-color);
 }

@@ -61,3 +61,25 @@
   color: inherit;
   text-shadow: none;
 }
+
+/* Code auto-suggest list menu */
+#fences-auto-suggest .active {
+  background: var(--accent-color);
+}
+
+#write .code-tooltip {
+  bottom: initial;
+  top: calc(100% - 1px);
+  background: #282a36;
+  border: 1px solid var(--accent-color);
+  border-top: 0;
+}
+
+.auto-suggest-container {
+  border-color: var(--md-char-color);
+}
+
+.auto-suggest-container .autoComplt-hint.active {
+  background: var(--side-bar-bg-color);
+  color: var(--item-hover-text-color);
+}

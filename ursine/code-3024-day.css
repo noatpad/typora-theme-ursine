@@ -52,3 +52,8 @@
   background: #d5e2f4 !important;
   color: inherit;
 }
+
+/* Code auto-suggest list menu */
+#write .code-tooltip {
+  background: #f7f7f7;
+}

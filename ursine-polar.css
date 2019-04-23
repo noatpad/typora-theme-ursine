@@ -63,6 +63,11 @@ sup.md-footnote {
   background: #dddddd;
 }
 
+/* Tooltip */
+.ty-tooltip {
+  background: var(--bg-color);
+}
+
 /* Sidebar */
 #typora-sidebar * {
   color: var(--bg-color);

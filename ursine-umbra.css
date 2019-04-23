@@ -546,6 +546,13 @@ span.md-def-split {
   margin-top: -2px;
 }
 
+/* Tooltip */
+.ty-tooltip {
+  background: var(--side-bar-bg-color);
+  color: var(--text-color);
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
 /* Focus mode */
 .on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) *,
 .on-focus-mode pre.md-end-block:not(.md-focus):not(.md-focus-container) {

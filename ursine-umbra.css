@@ -696,6 +696,44 @@ footer.ty-footer {
   color: var(--megamenu-item-hover-text-color);
 }
 
+/* Quick open window */
+#typora-quick-open {
+  top: 32px;
+  width: 40%;
+  min-width: 420px;
+  transform: translateX(-50%);
+  margin-left: 0;
+}
+
+.mac-seamless-mode #typora-quick-open {
+  top: 50px;
+}
+
+#typora-quick-open #typora-quick-open-input input {
+  border-color: var(--primary-color);
+}
+
+#typora-quick-open .ty-quick-open-category-title {
+  height: auto;
+  padding-top: 4px;
+  padding-left: 12px;
+}
+
+#typora-quick-open .typora-quick-open-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#typora-quick-open .typora-quick-open-item:not(.active):hover {
+  background: var(--active-search-item-bg-color);
+}
+
+#typora-quick-open .typora-quick-open-item-path {
+  margin-top: -2px;
+}
+
 /* Windows Unibody sidebar */
 #megamenu-menu-sidebar {
   background: var(--megamenu-sidebar-bg-color);

@@ -68,6 +68,11 @@ sup.md-footnote {
   color: var(--bg-color);
 }
 
+/* Quick open window */
+#typora-quick-open * {
+  color: var(--bg-color);
+}
+
 /* Windows Unibody sidebar */
 #megamenu-menu-sidebar, .megamenu-menu-list li:not(.saved) a:not(.active):hover, .megamenu-menu-list li a.active {
   color: var(--bg-color) !important;

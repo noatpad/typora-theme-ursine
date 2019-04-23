@@ -281,6 +281,8 @@ blockquote p:not(:last-child):before {
   height: calc(100% + 1rem);
 }
 
+/* Code blocks */
+
 code,
 .md-fences,
 tt {
@@ -292,6 +294,10 @@ code {
   border: 1px solid var(--accent-color);
   border-radius: 0.25rem;
   padding: 0 0.125rem;
+}
+
+.md-fences:not(.md-focus) .CodeMirror-activeline-background {
+  background: transparent;
 }
 
 /* Code auto-suggest list menu */

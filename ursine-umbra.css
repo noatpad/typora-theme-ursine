@@ -85,6 +85,7 @@
   --md-char-color: #5b5b5b; /* change color of meta characetrs like `*` in markdown */
   --meta-content-color: #757575; /* change color of meta contents like image text or link address in markdown */
   --link-color: #6bcafb; /* change color of hyperlinks */
+  --table-border-color: var(--md-char-color); /* color of table cell borders */
 
   --primary-color: #428bca; /* primary color */
   --primary-btn-border-color: #285e8e; /* primary color for buttons */
@@ -329,14 +330,26 @@ table tr:nth-child(2n) {
 td,
 th {
   padding: 0.35rem 0.7rem;
-  border: 1px solid var(--md-char-color);
+  border: 1px solid var(--table-border-color);
 }
 
 /* Table toolbar */
 .md-table-edit {
-  border-top: 1px solid var(--meta-content-color);
+  border-top: 1px solid var(--table-border-color);
   margin-top: -29px !important;
   padding: 3px 0;
+}
+
+.md-grid-board a.md-active,
+.md-grid-board a:hover {
+  background: var(--primary-color);
+  color: var(--table-border-color);
+}
+
+.md-grid-board tr[row='1'] a.md-active,
+.md-grid-board tr[row='1'] a:hover {
+  background: var(--primary-btn-border-color);
+  color: var(--table-border-color);
 }
 
 /* Table drag areas */

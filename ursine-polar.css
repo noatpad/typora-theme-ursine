@@ -82,3 +82,10 @@ sup.md-footnote {
 #megamenu-menu-sidebar, .megamenu-menu-list li:not(.saved) a:not(.active):hover, .megamenu-menu-list li a.active {
   color: var(--bg-color) !important;
 }
+
+/* Empty file splashscreen */
+#write > p:first-child:not(:only-child)::before,
+#write > p:only-child::before {
+  background: url(ursine/day.png) no-repeat center transparent;
+  background-size: cover;
+}

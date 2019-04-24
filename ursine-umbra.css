@@ -184,11 +184,6 @@ mark {
   background: #fee405;
 }
 
-/* Writing area -> line height */
-#write {
-	line-height: 1.6;
-}
-
 /* Custom list-style */
 #write ol,
 #write ul {
@@ -437,8 +432,13 @@ span.md-def-split {
 
 /* Writing area */
 #write {
+  position: static;
   width: 90%;
   max-width: 700px;
+  line-height: 1.6;
+
+  /* Windows-specific fix */
+  transform: none;
 }
 
 /* Fill whole width of container */
@@ -821,6 +821,33 @@ footer.ty-footer {
 /* Source Code */
 .cm-s-typora-default .cm-s-inner.CodeMirror-line {
   border: 0 !important;
+}
+
+/* Empty file splashscreen */
+#write > p:first-child {
+  position: static;
+}
+
+#write > p:first-child:not(:only-child)::before,
+#write > p:only-child::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url(ursine/night.png) no-repeat 45% 90% transparent;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+#write > p:only-child:empty::before {
+  opacity: 1;
 }
 
 /* Print/PDF */

@@ -128,12 +128,12 @@ body {
   font-size: 1em;
 }
 
-#write h1,
-#write h2,
-#write h3,
-#write h4,
-#write h5,
-#write h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Adelle";
 }
 

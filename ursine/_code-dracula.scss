@@ -1,0 +1,101 @@
+
+/* CodeMirror Dracula theme */
+
+// Theme adapted from https://codemirror.net/theme/dracula.css
+// Name:       dracula
+// Author:     Michael Kaminsky (http://github.com/mkaminsky11)
+// Original dracula color scheme by Zeno Rocha (https://github.com/zenorocha/dracula-theme)
+
+.cm-s-inner {
+  padding: .5rem .2rem;
+  border: 1px solid var(--accent-color) !important;
+  border-radius: .25rem;
+
+  &.CodeMirror, .CodeMirror-gutters {
+    background-color: #282a36 !important;
+    color: #f8f8f2 !important;
+    border: none;
+  }
+
+  .CodeMirror-gutters {
+    width: 5ch;
+    color: #6d8a88;
+  }
+
+  .CodeMirror-cursor { border-left: solid thin #f8f8f2 !important; }
+
+  .CodeMirror-linenumber {
+    width: 4ch !important;
+    color: #6D8A88;
+  }
+
+  .CodeMirror-line {
+    &::selection,
+    &::-moz-selection,
+    > span::selection,
+    > span::-moz-selection,
+    > span > span::selection,
+    > span > span::-moz-selection {
+      background: rgba(255, 255, 255, 0.10);
+    }
+  }
+
+  // Keywords
+  span {
+    &.cm-comment { color: #6272a4; }
+    &.cm-string,
+    &.cm-string-2 { color: #f1fa8c; }
+    &.cm-number { color: #bd93f9; }
+    &.cm-variable,
+    &.cm-variable-2 { color: #50fa7b; }
+    &.cm-def { color: white; }
+    &.cm-operator { color: #ff79c6; }
+    &.cm-keyword { color: #ff79c6; }
+    &.cm-atom { color: #bd93f9; }
+    &.cm-meta { color: #f8f8f2; }
+    &.cm-tag { color: #ff79c6; }
+    &.cm-attribute { color: #50fa7b; }
+    &.cm-qualifier { color: #50fa7b; }
+    &.cm-property { color: #66d9ef; }
+    &.cm-builtin { color: #50fa7b; }
+    &.cm-variable-3,
+    &.cm-type { color: #ffb86c; }
+  }
+
+  .md-fences.md-focus & .CodeMirror-activeline-background {
+    background: rgba(255,255,255,0.1);
+  }
+
+  .CodeMirror-matchingbracket {
+    text-decoration: underline;
+    color: white !important;
+  }
+
+  .CodeMirror-selected, .CodeMirror-selectedtext {
+    background: #3b4254 !important;
+    color: inherit;
+    text-shadow: none;
+  }
+}
+
+// Auto-suggestion list
+#fences-auto-suggest .active {
+  background: $accent-color;
+}
+
+#write .code-tooltip {
+  bottom: initial;
+  top: calc(100% - 1px);
+  background: #282a36;
+  border: 1px solid $accent-color;
+  border-top: 0;
+}
+
+.auto-suggest-container {
+  border-color: $md-char-color;
+
+  .autoComplt-hint.active {
+    background: $sidebar-bg-color;
+    color: $item-hover-text-color;
+  }
+}

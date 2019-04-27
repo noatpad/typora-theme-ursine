@@ -1,0 +1,106 @@
+
+/* CodeMirror 3024 Day theme */
+
+// Theme adapted from https.//codemirror.net/theme/3024-day.css
+// Name:       3024 day
+// Author:     Jan T. Sott (http://github.com/idleberg)
+//
+// CodeMirror template by Jan T. Sott (https://github.com/idleberg/base16-codemirror)
+// Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16)
+
+.cm-s-inner {
+  padding: .5rem .2rem;
+  border: 1px solid $accent-color !important;
+  border-radius: .25rem;
+
+  &.CodeMirror, .CodeMirror-gutters {
+    background-color: #f7f7f7 !important;
+    color: #3a3432 !important;
+    border: none;
+  }
+
+  .CodeMirror-gutters {
+    width: 5ch;
+    color: #6d8a88;
+  }
+
+  .CodeMirror-cursor { border-left: solid thin #5c5855 !important; }
+
+  .CodeMirror-linenumber {
+    width: 4ch !important;
+    color: #807d7c;
+  }
+
+  .CodeMirror-line {
+    &::selection,
+    &::-moz-selection,
+    > span::selection,
+    > span::-moz-selection,
+    > span > span::selection,
+    > span > span::-moz-selection {
+      background: #d6d5d4;
+    }
+  }
+
+  // Keywords
+  span {
+    &.cm-comment { color: #cdab53; }
+    &.cm-string,
+    &.cm-string-2 { color: #f2b01d; }
+    &.cm-number { color: #a16a94; }
+    &.cm-variable { color: #01a252; }
+    &.cm-variable-2 { color: #01a0e4; }
+    &.cm-def { color: #e8bbd0; }
+    &.cm-operator { color: #ff79c6; }
+    &.cm-keyword { color: #db2d20; }
+    &.cm-atom { color: #a16a94; }
+    &.cm-meta { color: inherit; }
+    &.cm-tag { color: #db2d20; }
+    &.cm-attribute { color: #01a252; }
+    &.cm-qualifier { color: #50fa7b; }
+    &.cm-property { color: #01a252; }
+    &.cm-builtin { color: #50fa7b; }
+    &.cm-variable-3,
+    &.cm-type { color: #ffb86c; }
+    &.cm-bracket { color: #3a3432; }
+    &.cm-link { color: #a16a94; }
+    &.cm-error { background: #db2d20; color: #5c5855; }
+  }
+
+  .md-fences.md-focus & .CodeMirror-activeline-background {
+    background: #e8f2ff;
+  }
+
+  .CodeMirror-matchingbracket {
+    text-decoration: underline;
+    color: #a16a94 !important;
+  }
+
+  .CodeMirror-selected, .CodeMirror-selectedtext {
+    background: #d5e2f4 !important;
+    color: inherit;
+    text-shadow: none;
+  }
+}
+
+// Auto-suggestion list
+#fences-auto-suggest .active {
+  background: $accent-color;
+}
+
+#write .code-tooltip {
+  bottom: initial;
+  top: calc(100% - 1px);
+  background: #f7f7f7;
+  border: 1px solid $accent-color;
+  border-top: 0;
+}
+
+.auto-suggest-container {
+  border-color: $md-char-color;
+
+  .autoComplt-hint.active {
+    background: $sidebar-bg-color;
+    color: $item-hover-text-color;
+  }
+}

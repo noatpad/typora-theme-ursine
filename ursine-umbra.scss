@@ -1,0 +1,888 @@
+// expandedFilenamePattern: ./css/$1.css
+
+// SCSS VARIABLES //
+
+$paragraph-font: "'Avenir Next LT Pro', 'Lato', sans-serif";
+$header-font: "'Adelle', 'Times New Roman', serif";
+$monospace-font: "'Cousine', 'Consolas', monospace";
+
+$bg-color: #1e2022 !default;
+$text-color: #ddd !default;
+$md-char-color: #5b5b5b !default;
+$meta-content-color: #757575 !default;
+$link-color: #6bcafb !default;
+$mark-color: #fee405 !default;
+$code-bg-color: transparent !default;
+
+$primary-color: #428bca !default;
+$primary-btn-border-color: #285e8e !default;
+$accent-color: #3c3c3c !default;
+$table-head-color: #4d4d4d !default;
+
+$active-file-bg-color: #16161a !default;
+$active-search-item-bg-color: #212121 !default;
+$item-hover-bg-color: $bg-color !default;
+$item-hover-text-color: #fff !default;
+
+$sidebar-bg-color: #2b2b2b !default;
+$sidebar-text-color: $text-color !default;
+$search-hit-bg-color: #428bca40 !default;
+$search-select-bg-color: #428bca90 !default;
+
+$megamenu-bg-color: $sidebar-bg-color !default;
+$megamenu-text-color: $text-color !default;
+$megamenu-sidebar-bg-color: $bg-color !default;
+$megamenu-sidebar-hover-bg-color: #161819 !default;
+$megamenu-sidebar-active-bg-color: #101010 !default;
+$megamenu-button-border-color: #9292928f !default;
+
+// FONT-FACES //
+
+// Avenir Next LT Pro provided by Adrian Frutiger and Akira Kobayashi.
+// Downloaded from `https://www.cufonfonts.com/font/avenir-next-lt-pro`
+@font-face {
+  font-family: 'Avenir Next LT Pro';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Avenir Next LT Pro Regular'), url('./ursine/AvenirNextLTPro-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Avenir Next LT Pro';
+  font-style: italic;
+  font-weight: normal;
+  src: local('Avenir Next LT Pro It'), url('./ursine/AvenirNextLTPro-It.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Avenir Next LT Pro';
+  font-style: normal;
+  font-weight: bold;
+  src: local('Avenir Next LT Pro Demi'), url('./ursine/AvenirNextLTPro-Demi.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Avenir Next LT Pro';
+  font-style: italic;
+  font-weight: bold;
+  src: local('Avenir Next LT Pro DemiIt'), url('./ursine/AvenirNextLTPro-DemiIt.woff') format('woff');
+}
+
+// Adelle provided by Veronika Burian and Jos Scaglione
+// Downloaded from `https://www.cufonfonts.com/font/adelle`
+@font-face {
+  font-family: 'Adelle';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Adelle Light'), url('./ursine/Adelle_light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Adelle';
+  font-style: italic;
+  font-weight: normal;
+  src: local('Adelle Light Italic'), url('./ursine/Adelle_LightItalic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Adelle';
+  font-style: normal;
+  font-weight: bold;
+  src: local('Adelle SemiBold'), url('./ursine/Adelle_Semibold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Adelle';
+  font-style: italic;
+  font-weight: bold;
+  src: local('Adelle SemiBold Italic'), url('./ursine/Adelle_SemiBoldItalic.woff') format('woff');
+}
+
+// Cousine provided by Steve Matteson from Google Fonts
+// Downloaded from `https://fonts.google.com/specimen/Cousine`
+@font-face {
+  font-family: 'Cousine';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Cousine Regular'), url('./ursine/Cousine-Regular.woff') format('woff');
+}
+
+// IMPORTS //
+
+@import 'ursine/code-dracula';
+
+// ROOT VARIABLES //
+
+:root {
+  --bg-color: #{$bg-color};                      // background color
+  --text-color: #{$text-color};                  // text color
+  --md-char-color: #{$md-char-color};            // color of meta characters (i.e. `*` in markdown)
+  --meta-content-color: #{$meta-content-color};  // color of meta contents (i.e. image text or link address in markdown)
+  --table-border-color: #{$md-char-color};       // color of table cell borders
+
+  --primary-color: #{$primary-color};                        // primary color
+  --primary-btn-border-color: #{$primary-btn-border-color};  // primary color for button borders
+  --primary-btn-text-color: #{$text-color};                  // text color for buttons
+
+  --window-border: 1px solid #{$active-file-bg-color};   // border color for window and sidebar
+
+  --active-file-bg-color: #{$active-file-bg-color};                // background color for active file in sidebar
+  --active-file-text-color: inherit;                            // text color for selected file
+  --active-file-border-color: #{$meta-content-color};              // border color for selected file
+  --active-search-item-bg-color: #{$active-search-item-bg-color};  // background color for active search item
+
+  --side-bar-bg-color: #{$sidebar-bg-color};             // sidebar background color
+  --item-hover-bg-color: #{$item-hover-bg-color};        // background color of control items when hovering
+  --item-hover-text-color: #{$item-hover-text-color};    // text color upon hovering over menu items
+  --search-select-text-color: #{$text-color};            // text color for selected searched text
+  --search-select-bg-color: #{$search-select-bg-color};  // background color for selected searched text
+  --rawblock-edit-panel-bd: #{$accent-color};            // background color for inline HTML 'edit panel' blocks
+  --monospace: #{$monospace-font};                       // monospace font for code
+}
+
+// STYLING //
+
+// Tags
+html, body {
+  font-family: unquote($paragraph-font);
+}
+
+body { font-size: 1em; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: unquote($header-font);
+}
+
+p { margin: .5rem 0; }
+
+a { color: $link-color; }
+
+del { color: $md-char-color; }
+
+mark {
+  padding: 2px 1px;
+  background: $mark-color;
+}
+
+blockquote {
+  margin: 1rem 0 1rem 2rem;
+  font-family: unquote($header-font);
+
+  p {
+    &::before {
+      content: '';
+      position: absolute;
+      left: -2rem;
+      height: 100%;
+      width: .25rem;
+      background: $primary-color;
+    }
+
+    &:not(:last-child)::before {
+      height: calc(100% + 1rem);
+    }
+  }
+}
+
+code,
+.md-fences,
+tt {
+  font-family: unquote($monospace-font);
+  font-size: 1rem;
+}
+
+code {
+  border: 1px solid $accent-color;
+  border-radius: .25rem;
+  padding: 0 .125rem;
+  background: $code-bg-color;
+}
+
+hr { border-color: $md-char-color; }
+
+table {
+  border: 1px solid $md-char-color;
+  margin: 1rem 0;
+
+  tr:nth-child(2n) {
+    background: $accent-color;
+  }
+}
+
+thead { background: $table-head-color; }
+
+td, th {
+  padding: .35rem .7rem;
+  border: 1px solid $md-char-color;
+}
+
+// Writing area
+#write {
+  position: static;
+  width: 90%;
+  max-width: 700px;
+  line-height: 1.6;
+
+  transform: none;    // Windows-specific fix
+
+  h1, h2, h3, h4, h5, h6, p, pre {
+    width: auto;
+  }
+
+  // Headers
+  h1, h2, h3, h4, h5, h6 {
+    &::before {
+      position: absolute;
+      top: 0;
+      right: calc(100% + 10px);
+      color: $md-char-color;
+      font-size: 1rem;
+      font-weight: bold;
+      font-variant: 'small-caps';
+    }
+  }
+
+  // Disable default header symbol
+  h3, h4, h5, h6 {
+    &::before {
+      border: 0;
+      border-radius: 0;
+      left: auto;
+      float: none;
+      padding: 0;
+      vertical-align: baseline;
+      line-height: 20px;
+    }
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    margin: 1rem 0;
+
+    &::before {
+      content: 'H1';
+      top: .7rem;
+    }
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    margin: .7rem 0;
+
+    &::before {
+      content: 'H2';
+      top: .37rem;
+    }
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    margin: .5rem 0;
+
+    &::before {
+      content: 'H3';
+      top: .15rem;
+    }
+  }
+
+  h4 {
+    font-size: 1.1rem;
+    margin: .2rem 0;
+
+    &::before {
+      content: 'H4';
+    }
+  }
+
+  h5, h6 {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  h5::before {
+    content: 'H5';
+  }
+
+  h6::before {
+    content: 'H6';
+  }
+
+  // Lists
+  ol, ul {
+    padding-left: 2rem;
+    margin: .5rem 0;
+
+    > li {
+      color: $primary-color;
+      padding-left: .25rem;
+
+      > * {
+        color: $text-color;
+      }
+    }
+  }
+
+  ul {
+    list-style-type: disc;
+  }
+
+  // Checklists
+  .md-task-list-item {
+    $transition-duration: .3s;
+
+    > input {
+      -webkit-appearance: initial;
+      display: block;
+      position: absolute;
+      border: 1px solid $md-char-color;
+      border-radius: .25rem;
+      margin-top: .1rem;
+      margin-left: -1.8rem;
+      height: 1.2rem;
+      width: 1.2rem;
+      transition: background $transition-duration;
+
+      &:focus {
+        outline: none;
+        box-shadow: none;
+      }
+
+      &:hover {
+        background: $accent-color;
+      }
+
+      &[checked]::before {
+        content: '';
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        height: 60%;
+        width: 2px;
+        transform: rotate(40deg);
+        background: $text-color;
+      }
+
+      &[checked]::after {
+        content: '';
+        position: absolute;
+        top: 46%;
+        left: 25%;
+        height: 30%;
+        width: 2px;
+        transform: rotate(-40deg);
+        background: $text-color;
+      }
+    }
+
+    > p {
+      transition: color $transition-duration;
+    }
+
+    &.task-list-done > p {
+      color: $md-char-color;
+      text-decoration: line-through;
+    }
+  }
+
+  // YAML
+  .md-meta-block {
+    background-color: transparent;
+    border-bottom: 1px solid $md-char-color;
+    padding-bottom: 1rem;
+    opacity: .8;
+  }
+
+  // Table toolbar
+  .md-table-edit {
+    border-top: 1px solid $md-char-color;
+    margin-top: -29px !important;
+    padding: 3px 0;
+  }
+
+  .md-grid-board {
+    a {
+      &.md-active,
+      &:hover {
+        background: $primary-color;
+        color: $md-char-color;
+      }
+    }
+
+    tr[row='1'] a {
+      &.md-active,
+      &:hover {
+        background: $primary-btn-border-color;
+        color: $md-char-color;
+      }
+    }
+  }
+
+  .btn-group .btn + .btn {
+    margin-left: 0;
+  }
+
+  .btn-default {
+    &.active,
+    &.focus,
+    &:active,
+    &:focus,
+    &:hover,
+    .open > &.dropdown-toggle {
+      background: transparent;
+      color: inherit;
+    }
+
+    &.md-table-more:hover {
+      border: 1px solid #adadad;
+    }
+  }
+
+  // Table drag areas
+  .typora-table-drag-area {
+    &::after {
+      content: '';
+      position: absolute;
+      border: 2px solid $text-color;
+      opacity: 0;
+      transition: opacity .4s;
+    }
+
+    #typora-table-row-tracker &::after,
+    #typora-table-col-tracker &::after {
+      opacity: 1;
+    }
+
+    #typora-table-row-tracker &::after {
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 100%;
+    }
+
+    #typora-table-col-tracker &::after {
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 100%;
+      height: 0;
+    }
+  }
+
+  // Table of contents
+  .md-toc-tooltip {
+    z-index: 10;
+  }
+
+  .md-toc-item {
+    font-size: 1.1rem;
+    color: var(--primary-btn-border-color);
+  }
+
+  .md-toc-h1 {
+    font-family: unquote($header-font);
+    font-size: 1.3rem;
+  }
+
+  .md-toc-h2 {
+    font-size: 1.2rem;
+  }
+
+  // Footnotes
+  .md-footnote {
+    font-family: unquote($header-font);
+    font-size: .8rem;
+    padding: 0 4px;
+  }
+
+  .md-def-split {
+    min-width: 1ch;
+  }
+
+  .md-def-name {
+    &::before, &::after {
+      color: $meta-content-color;
+    }
+  }
+
+  // Image meta text
+  .md-image > .md-meta {
+    color: $meta-content-color;
+  }
+
+  // Inline styles
+  .md-rawblock-tooltip {
+    top: -1.5rem;
+    height: 1.5rem;
+    padding: .25rem;
+  }
+
+  // Search results
+  .md-search-hit {
+    background: $search-hit-bg-color;
+    border-radius: .125rem;
+  }
+
+  .md-search-select {
+    background: $search-select-bg-color;
+    border: 1px solid $megamenu-button-border-color;
+    padding: 0 1px;
+  }
+}
+
+// Quick Open window
+#typora-quick-open {
+  top: 32px;
+  width: 40%;
+  min-width: 420px;
+  transform: translateX(-50%);
+  margin-left: 0;
+
+  .mac-seamless-mode & {
+    top: 50px;
+  }
+
+  #typora-quick-open-input input {
+    border-color: $primary-color;
+  }
+
+  .ty-quick-open-category-title {
+    height: auto;
+    padding-top: 4px;
+    padding-left: 12px;
+  }
+
+  .typora-quick-open-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+
+    &:not(.active):hover {
+      background: $active-search-item-bg-color;
+    }
+  }
+
+  .typora-quick-open-item-path {
+    margin-top: -2px;
+  }
+}
+
+// Tooltips
+.ty-tooltip {
+  background: $sidebar-bg-color;
+  color: $text-color;
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
+// Focus mode
+.on-focus-mode {
+  .md-end-block:not(.md-focus):not(.md-focus-container) {
+    &, * {
+      color: $md-char-color !important;
+    }
+
+    mark {
+      background: $accent-color;
+    }
+
+    img {
+      opacity: .5;
+    }
+  }
+
+  blockquote .md-end-block:not(.md-focus):not(.md-focus-container)::before {
+    opacity: .5;
+  }
+
+  li:not(.md-focus-container)::before {
+    opacity: .5;
+  }
+}
+
+// Sidebar
+#typora-sidebar {
+  border-right: 1px solid #19191c;
+
+  .sidebar-tabs {
+    font-family: unquote($header-font);
+    border-bottom: 1px solid black;
+  }
+
+  .file-list-item-file-name {
+    font-family: unquote($header-font);
+    font-size: 1.2em;
+  }
+
+  // Search
+  #file-library-search-input {
+    background: $sidebar-bg-color;
+  }
+
+  #file-library-search {
+    .file-list-item-file-name {
+      font-size: 1.1rem;
+    }
+
+    .ty-search-item.active {
+      background: $active-search-item-bg-color;
+    }
+  }
+
+  .file-list-item-summary,
+  .ty-search-item-line {
+    font-family: unquote($paragraph-font);
+  }
+
+  .ty-file-search-match-text,
+  .ty-outline-hit {
+    font-weight: bold;
+    background: transparent;
+  }
+
+  // Outline
+  #outline-content {
+    line-height: 1.4em;
+
+    .outline-h1 > .outline-item {
+      font-family: unquote($header-font);
+    }
+  }
+
+  .outline-title-wrapper,
+  .outline-item-wrapper.outline-h1 > .outline-item {
+    font-family: unquote($header-font);
+    font-weight: bold;
+  }
+
+  // Node/Item
+  .file-library-node,
+  .file-library-node .file-node-background {
+    transition: background .4s;
+  }
+
+  .file-tree-node.file-library-file-node:not(.active):hover .file-node-background,
+  .file-list-item.file-library-node:not(.active):hover {
+    background: $item-hover-bg-color;
+  }
+
+  .file-tree-node.file-library-file-node.active .file-node-background,
+  .file-list-item.file-library-file-node.active {
+    border-left: 5px solid $primary-color;
+  }
+
+  // Remove blinking animation when updating filename
+  .blink-area { animation: none; }
+
+  // Footer
+  #ty-sidebar-footer {
+    border-top: 1px solid black;
+
+    .sidebar-footer-item {
+      transition: background .3s;
+    }
+  }
+}
+
+// Windows-specific context and dropdowns
+%windows-context-and-dropdowns {
+  background: $text-color !important;
+  color: $bg-color !important;
+}
+
+.dropdown-menu {
+  .active a,
+  .has-extra-menu.active a,
+  .has-btn-submenu .menu-style-btn.active {
+    @extend %windows-context-and-dropdowns;
+  }
+}
+
+#footer-word-count-info .ty-footer-word-count-all tr:hover,
+#ty-spell-check-dict-missing-menu li:hover {
+  @extend %windows-context-and-dropdowns;
+}
+
+.ty-spell-check-panel-item {
+  &.ty-active,
+  &:hover {
+    @extend %windows-context-and-dropdowns;
+  }
+}
+
+// Windows Unibody
+footer.ty-footer {
+  border-top: 0;
+}
+
+.footer-item:hover {
+  background: $text-color !important;
+  color: $bg-color !important;
+}
+
+#outline-btn:hover {
+  color: inherit;
+}
+
+.form-control:focus {
+  border-color: $primary-color;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 2px $primary-color;
+}
+
+// Windows Unibody megamenu
+.megamenu-opened header {
+  background-image: none;
+}
+
+#top-titlebar {
+  &, * {
+    color: inherit;
+  }
+}
+
+#megamenu-content {
+  padding-top: 28px;
+  background: $megamenu-bg-color;
+  color: $megamenu-text-color;
+
+  .long-btn {
+    border-color: $megamenu-button-border-color;
+    transition: border-color .4s;
+
+    &:hover {
+      border-color: $primary-color;
+      background: $item-hover-bg-color;
+      color: $item-hover-text-color !important;
+    }
+  }
+}
+
+#megamenu-menu-panel:not(:first-of-type) {
+  margin-top: 48px;
+}
+
+#recent-file-panel-action-btn {
+  background: inherit;
+  border-color: $megamenu-button-border-color;
+  transition: all .4s;
+
+  &:hover {
+    border-color: $primary-color;
+    background: $item-hover-bg-color;
+    color: $item-hover-text-color;
+  }
+}
+
+#recent-document-table {
+  background-color: inherit;
+}
+
+#recent-file-panel tbody tr {
+  &:nth-child(2n-1) {
+    background-color: inherit;
+  }
+
+  &:hover {
+    background-color: $item-hover-bg-color !important;
+  }
+
+  &:hover td:nth-child(1) {
+    color: $item-hover-text-color;
+  }
+}
+
+// Windows Unibody sidebar
+#megamenu-menu-sidebar {
+  background-color: $megamenu-sidebar-bg-color;
+  color: $text-color;
+}
+
+.megamenu-menu-header,
+.megamenu-menu-list li:not(.saved) a {
+  transition: all .4s;
+}
+
+.megamenu-menu-header {
+  border-bottom: 1px solid $active-file-bg-color;
+
+  &:hover {
+    background: $megamenu-sidebar-hover-bg-color;
+  }
+}
+
+.megamenu-menu-list li {
+  &:not(.saved) a:not(.active):hover,
+  a.active {
+    background: $megamenu-sidebar-active-bg-color !important;
+  }
+}
+
+#m-saved {
+  background: inherit;
+  color: inherit;
+}
+
+#megamenu-menu-list {
+  margin: 0;
+}
+
+.theme-preview-div {
+  transition: all .4s;
+
+  &:hover {
+    border: 4px solid $primary-btn-border-color;
+  }
+
+  &.active,
+  &.active:hover {
+    border: 4px solid $primary-color;
+  }
+
+  &.active i {
+    color: $primary-color;
+  }
+}
+
+// Source Code mode
+.cm-s-typora-default .cm-s-inner.CodeMirror-line {
+  border: 0 !important;
+}
+
+// Empty file splashscreen
+#write > p {
+  &:first-child {
+    position: static;
+  }
+
+  &:first-child:not(:only-child)::before,
+  &:only-child::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('ursine/night.png') no-repeat 45% 90% transparent;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    opacity: 0;
+    transition: opacity .5s;
+  }
+
+  &:only-child:empty::before {
+    opacity: 1;
+  }
+}
+
+// Print/Export to PDF/HTML
+@media print {
+  #write {
+    ol > li,
+    ul > li {
+      color: $text-color;
+    }
+  }
+}

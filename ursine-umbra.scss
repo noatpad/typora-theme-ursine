@@ -582,16 +582,16 @@ td, th {
 // Focus mode
 .on-focus-mode {
   .md-end-block:not(.md-focus):not(.md-focus-container) {
-    &, * {
+    &, *, ol, ul {
       color: $md-char-color !important;
+    }
+
+    img, .md-footnote, .md-emoji {
+      opacity: .5;
     }
 
     mark {
       background: $accent-color;
-    }
-
-    img {
-      opacity: .5;
     }
   }
 

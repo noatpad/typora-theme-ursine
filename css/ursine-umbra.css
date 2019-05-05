@@ -614,16 +614,16 @@ td, th {
   border-color: #00000040;
 }
 
-.on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container), .on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) * {
+.on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container), .on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) *, .on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) ol, .on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) ul {
   color: #5b5b5b !important;
+}
+
+.on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) img, .on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) .md-footnote, .on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) .md-emoji {
+  opacity: .5;
 }
 
 .on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) mark {
   background: #3c3c3c;
-}
-
-.on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) img {
-  opacity: .5;
 }
 
 .on-focus-mode blockquote .md-end-block:not(.md-focus):not(.md-focus-container)::before {

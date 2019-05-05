@@ -1,0 +1,7 @@
+// expandedFilenamePattern: ./css/$1.css
+
+// Set Cyrillic support to `true`
+$cyrillic-support: true;
+
+// And let the magic unfold...
+@import 'ursine-umbra';

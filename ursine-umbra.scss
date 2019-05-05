@@ -314,10 +314,13 @@ td, th {
 
     > li {
       color: $primary-color;
-      padding-left: .25rem;
 
       > * {
         color: $text-color;
+      }
+
+      > *:not(ol):not(ul) {
+        padding-left: .25rem;
       }
     }
   }

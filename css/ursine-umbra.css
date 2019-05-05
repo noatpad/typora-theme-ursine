@@ -389,11 +389,14 @@ td, th {
 
 #write ol > li, #write ul > li {
   color: #428bca;
-  padding-left: .25rem;
 }
 
 #write ol > li > *, #write ul > li > * {
   color: #ddd;
+}
+
+#write ol > li > *:not(ol):not(ul), #write ul > li > *:not(ol):not(ul) {
+  padding-left: .25rem;
 }
 
 #write ul {

@@ -25,9 +25,14 @@ $item-hover-bg-color: $bg-color !default;
 $item-hover-text-color: #fff !default;
 
 $sidebar-bg-color: #2b2b2b !default;
+$sidebar-border-color: #19191c !default;
 $sidebar-text-color: $text-color !default;
 $search-hit-bg-color: #428bca40 !default;
 $search-select-bg-color: #428bca90 !default;
+
+$tooltip-bg-color: $sidebar-bg-color !default;
+$tooltip-text-color: $text-color !default;
+$tooltip-border-color: #00000040 !default;
 
 $megamenu-bg-color: $sidebar-bg-color !default;
 $megamenu-text-color: $text-color !default;
@@ -434,10 +439,6 @@ td, th {
       background: transparent;
       color: inherit;
     }
-
-    &.md-table-more:hover {
-      border: 1px solid #adadad;
-    }
   }
 
   // Table drag areas
@@ -573,9 +574,9 @@ td, th {
 
 // Tooltips
 .ty-tooltip {
-  background: $sidebar-bg-color;
-  color: $text-color;
-  border-color: rgba(0, 0, 0, 0.3);
+  background: $tooltip-bg-color;
+  color: $tooltip-text-color;
+  border-color: $tooltip-border-color;
 }
 
 // Focus mode
@@ -605,11 +606,11 @@ td, th {
 
 // Sidebar
 #typora-sidebar {
-  border-right: 1px solid #19191c;
+  border-right: 1px solid $sidebar-border-color;
 
   .sidebar-tabs {
     font-family: unquote($header-font);
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid $sidebar-border-color;
   }
 
   .file-list-item-file-name {
@@ -679,7 +680,7 @@ td, th {
 
   // Footer
   #ty-sidebar-footer {
-    border-top: 1px solid black;
+    border-top: 1px solid $sidebar-border-color;
 
     .sidebar-footer-item {
       transition: background .3s;
@@ -689,8 +690,8 @@ td, th {
 
 // Windows-specific context and dropdowns
 %windows-context-and-dropdowns {
-  background: $text-color !important;
-  color: $bg-color !important;
+  background: $tooltip-text-color !important;
+  color: $tooltip-bg-color !important;
 }
 
 .dropdown-menu {
@@ -719,8 +720,7 @@ footer.ty-footer {
 }
 
 .footer-item:hover {
-  background: $text-color !important;
-  color: $bg-color !important;
+  @extend %windows-context-and-dropdowns;
 }
 
 #outline-btn:hover {
@@ -729,7 +729,7 @@ footer.ty-footer {
 
 .form-control:focus {
   border-color: $primary-color;
-  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 2px $primary-color;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 2px $primary-color;
 }
 
 // Windows Unibody megamenu

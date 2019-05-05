@@ -389,11 +389,14 @@ td, th {
 
 #write ol > li, #write ul > li {
   color: #db4d52;
-  padding-left: .25rem;
 }
 
 #write ol > li > *, #write ul > li > * {
   color: #333;
+}
+
+#write ol > li > *:not(ol):not(ul), #write ul > li > *:not(ol):not(ul) {
+  padding-left: .25rem;
 }
 
 #write ul {
@@ -484,10 +487,6 @@ td, th {
 .open > #write .btn-default.dropdown-toggle {
   background: transparent;
   color: inherit;
-}
-
-#write .btn-default.md-table-more:hover {
-  border: 1px solid #adadad;
 }
 
 #write .typora-table-drag-area::after {
@@ -610,9 +609,9 @@ td, th {
 }
 
 .ty-tooltip {
-  background: #2e3235;
+  background: #fbfbfb;
   color: #333;
-  border-color: rgba(0, 0, 0, 0.3);
+  border-color: #00000040;
 }
 
 .on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container), .on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) * {
@@ -641,7 +640,7 @@ td, th {
 
 #typora-sidebar .sidebar-tabs {
   font-family: 'Adelle', 'Times New Roman', serif;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #19191c;
 }
 
 #typora-sidebar .file-list-item-file-name {
@@ -706,7 +705,7 @@ td, th {
 }
 
 #typora-sidebar #ty-sidebar-footer {
-  border-top: 1px solid black;
+  border-top: 1px solid #19191c;
 }
 
 #typora-sidebar #ty-sidebar-footer .sidebar-footer-item {
@@ -716,18 +715,13 @@ td, th {
 .dropdown-menu .active a,
 .dropdown-menu .has-extra-menu.active a,
 .dropdown-menu .has-btn-submenu .menu-style-btn.active, #footer-word-count-info .ty-footer-word-count-all tr:hover,
-#ty-spell-check-dict-missing-menu li:hover, .ty-spell-check-panel-item.ty-active, .ty-spell-check-panel-item:hover {
+#ty-spell-check-dict-missing-menu li:hover, .ty-spell-check-panel-item.ty-active, .ty-spell-check-panel-item:hover, .footer-item:hover {
   background: #333 !important;
   color: #fbfbfb !important;
 }
 
 footer.ty-footer {
   border-top: 0;
-}
-
-.footer-item:hover {
-  background: #333 !important;
-  color: #fbfbfb !important;
 }
 
 #outline-btn:hover {
@@ -1033,10 +1027,6 @@ table tr:nth-child(2n) {
 
 sup.md-footnote {
   background: #ddd;
-}
-
-.ty-tooltip {
-  background: #fbfbfb;
 }
 
 #typora-sidebar * {

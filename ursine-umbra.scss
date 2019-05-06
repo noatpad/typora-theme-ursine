@@ -239,22 +239,17 @@ mark {
 }
 
 blockquote {
+  position: relative;
   margin: 1rem 0 1rem 2rem;
   font-family: unquote($header-font);
 
-  p {
-    &::before {
-      content: '';
-      position: absolute;
-      left: -2rem;
-      height: 100%;
-      width: .25rem;
-      background: $primary-color;
-    }
-
-    &:not(:last-child)::before {
-      height: calc(100% + 1rem);
-    }
+  &::before {
+    content: '';
+    position: absolute;
+    left: -2rem;
+    height: 100%;
+    width: .25rem;
+    background: $primary-color;
   }
 }
 

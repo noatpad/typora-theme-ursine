@@ -245,21 +245,18 @@ mark {
 }
 
 blockquote {
+  position: relative;
   margin: 1rem 0 1rem 2rem;
   font-family: 'Adelle', 'Times New Roman', serif;
 }
 
-blockquote p::before {
+blockquote::before {
   content: '';
   position: absolute;
   left: -2rem;
   height: 100%;
   width: .25rem;
   background: #428bca;
-}
-
-blockquote p:not(:last-child)::before {
-  height: calc(100% + 1rem);
 }
 
 code,

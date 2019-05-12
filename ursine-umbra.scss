@@ -917,7 +917,7 @@ footer.ty-footer {
 
 // Empty file splashscreen
 #write > p {
-  &:first-child {
+  &:first-child:empty {
     position: static;
   }
 
@@ -936,7 +936,6 @@ footer.ty-footer {
     -moz-background-size: cover;
     -o-background-size: cover;
     opacity: 0;
-    transition: opacity .5s;
   }
 
   &:only-child:empty::before {

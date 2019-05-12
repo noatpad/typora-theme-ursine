@@ -40,6 +40,9 @@ $search-select-bg-color: #428bca90 !default;
 $tooltip-bg-color: $sidebar-bg-color !default;
 $tooltip-text-color: $text-color !default;
 $tooltip-border-color: #00000040 !default;
+$footnote-sup-bg-color: #111 !default;
+$footnote-tooltip-bg-color: #111 !default;
+$footnote-tooltip-text-color: $text-color !default;
 
 $megamenu-bg-color: $sidebar-bg-color !default;
 $megamenu-text-color: $text-color !default;
@@ -565,8 +568,11 @@ td, th {
   // Footnotes
   .md-footnote {
     font-family: unquote($header-font);
-    font-size: .8rem;
+    font-size: .8em;
+    border: 1px solid $accent-color;
     padding: 0 4px;
+    background: $footnote-sup-bg-color;
+    color: $text-color;
   }
 
   .md-def-split {
@@ -647,6 +653,17 @@ td, th {
   background: $tooltip-bg-color;
   color: $tooltip-text-color;
   border-color: $tooltip-border-color;
+}
+
+.code-tooltip.md-f-tooltip {
+  &, .md-arrow::after {
+    background: $footnote-tooltip-bg-color !important;
+    color: $footnote-tooltip-text-color !important;
+  }
+
+  a {
+    color: $link-color;
+  }
 }
 
 // Focus mode

@@ -21,13 +21,16 @@ $item-hover-bg-color: #202020;
 $item-hover-text-color: #fff;
 
 $sidebar-bg-color: #2e3235;
-$sidebar-text-color: $text-color;
+$sidebar-text-color: #f0f0f0;
 $search-hit-bg-color: #db4d5230;
 $search-select-bg-color: #db4d5270;
 
 $tooltip-bg-color: $bg-color;
 $tooltip-text-color: $text-color;
 $tooltip-border-color: #00000040;
+$footnote-sup-bg-color: #f0f0f0;
+$footnote-tooltip-bg-color: #222;
+$footnote-tooltip-text-color: $sidebar-text-color;
 
 $megamenu-bg-color: $bg-color;
 $megamenu-text-color: $text-color;
@@ -56,23 +59,23 @@ sup.md-footnote {
 
 // Sidebar
 #typora-sidebar * {
-  color: $bg-color;
+  color: $sidebar-text-color;
 }
 
 // Quick open window
 #typora-quick-open * {
-  color: $bg-color;
+  color: $sidebar-text-color;
 }
 
 // Windows Unibody sidebar
 #megamenu-menu-sidebar {
-  color: $bg-color !important;
+  color: $sidebar-text-color !important;
 }
 
 .megamenu-menu-list li {
   &:not(.saved) a:not(.active):hover,
   a.active {
-    color: $bg-color !important;
+    color: $sidebar-text-color !important;
   }
 }
 

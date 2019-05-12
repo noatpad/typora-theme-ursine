@@ -24,5 +24,17 @@ Ursine Polar | Ursine Dark
 ![Polar Unibody Preview](images/polar-unibody.png) | ![Umbra Unibody Preview](images/umbra-unibody.png)
 ![Polar Splashscreen](images/polar-splashscreen.png) | ![Umbra Splashscreen](images/umbra-splashscreen.png)
 
+## Build
+Ursine has recently switched to developing in [Sass](https://sass-lang.com/) and [Gulp.js](https://gulpjs.com/), so the repo no longer holds the direct CSS files for the sake of keeping the repo's filetree clean.
+
+If you wish to manually build the theme (and maybe add your own touches in the process), you'll need `npm` & run the following commands:
+
+```bash
+npm i
+gulp
+```
+
+The compiled CSS files will be located in `/css` once complete.
+
 ### Related
 - If you like Ursine, but need a `RTL` theme, check out [sadra's Middle East theme!](https://github.com/sadra/middle-east)

@@ -5,7 +5,7 @@ const zip = require('gulp-zip');
 const merge = require('merge-stream');
 
 const build = () => {
-  console.log("Zipping files...")
+  console.log("Compiling CSS files...")
   sass.compiler = require('node-sass');
 
   return src('*.scss')

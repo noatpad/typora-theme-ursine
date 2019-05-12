@@ -1,0 +1,23 @@
+{
+  "name": "typora-theme-ursine",
+  "version": "1.5.1",
+  "description": "A Typora theme, inspired by Bear",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aCluelessDanny/typora-theme-ursine.git"
+  },
+  "author": "A clueless Danny",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aCluelessDanny/typora-theme-ursine/issues"
+  },
+  "homepage": "https://github.com/aCluelessDanny/typora-theme-ursine#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-zip": "^4.2.0",
+    "merge-stream": "^1.0.1",
+    "node-sass": "^4.12.0"
+  }
+}

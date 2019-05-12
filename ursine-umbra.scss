@@ -330,7 +330,7 @@ td, th {
 
     &::before {
       content: 'H1';
-      top: .7rem;
+      top: 1rem;
     }
   }
 
@@ -340,7 +340,7 @@ td, th {
 
     &::before {
       content: 'H2';
-      top: .37rem;
+      top: .6rem;
     }
   }
 
@@ -350,7 +350,7 @@ td, th {
 
     &::before {
       content: 'H3';
-      top: .15rem;
+      top: .35rem;
     }
   }
 
@@ -360,12 +360,17 @@ td, th {
 
     &::before {
       content: 'H4';
+      top: .24rem;
     }
   }
 
   h5, h6 {
     font-size: 1rem;
     margin: 0;
+
+    &::before {
+      top: .2rem;
+    }
   }
 
   h5::before {

@@ -127,7 +127,7 @@ $megamenu-button-border-color: #9292928f !default;
     font-family: 'Avenir Next LT Pro';
     font-style: italic;
     font-weight: normal;
-    src: local('Avenir Next LT Pro It'), url('./ursine/AvenirNextLTPro-It.woff') format('woff');
+    src: local('Avenir Next LT Pro It'), url('./ursine/AvenirNextLTPro-Italic.woff') format('woff');
   }
 
   @font-face {
@@ -141,7 +141,7 @@ $megamenu-button-border-color: #9292928f !default;
     font-family: 'Avenir Next LT Pro';
     font-style: italic;
     font-weight: bold;
-    src: local('Avenir Next LT Pro DemiIt'), url('./ursine/AvenirNextLTPro-DemiIt.woff') format('woff');
+    src: local('Avenir Next LT Pro DemiIt'), url('./ursine/AvenirNextLTPro-DemiItalic.woff') format('woff');
   }
 
   // Adelle provided by Veronika Burian and Jos Scaglione
@@ -150,28 +150,28 @@ $megamenu-button-border-color: #9292928f !default;
     font-family: 'Adelle';
     font-style: normal;
     font-weight: normal;
-    src: local('Adelle Light'), url('./ursine/Adelle_light.woff') format('woff');
+    src: local('Adelle Light'), url('./ursine/Adelle-Light.woff') format('woff');
   }
 
   @font-face {
     font-family: 'Adelle';
     font-style: italic;
     font-weight: normal;
-    src: local('Adelle Light Italic'), url('./ursine/Adelle_LightItalic.woff') format('woff');
+    src: local('Adelle Light Italic'), url('./ursine/Adelle-LightItalic.woff') format('woff');
   }
 
   @font-face {
     font-family: 'Adelle';
     font-style: normal;
     font-weight: bold;
-    src: local('Adelle SemiBold'), url('./ursine/Adelle_Semibold.woff') format('woff');
+    src: local('Adelle SemiBold'), url('./ursine/Adelle-Semibold.woff') format('woff');
   }
 
   @font-face {
     font-family: 'Adelle';
     font-style: italic;
     font-weight: bold;
-    src: local('Adelle SemiBold Italic'), url('./ursine/Adelle_SemiBoldItalic.woff') format('woff');
+    src: local('Adelle SemiBold Italic'), url('./ursine/Adelle-SemiBoldItalic.woff') format('woff');
   }
 }
 

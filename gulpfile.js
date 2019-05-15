@@ -21,7 +21,7 @@ const makeZip = (cyrillic) => {
     zipName = 'Ursine_Cyrillic.zip';
   } else {
     cssGlob = ['css/*.css', '!css/*-cyrillic.css'];
-    assetGlob = ['ursine/*.png', 'ursine/Adelle_*.woff', 'ursine/AvenirNextLTPro-*.woff'];
+    assetGlob = ['ursine/*.png', 'ursine/Adelle-*.woff', 'ursine/AvenirNextLTPro-*.woff'];
     zipName = 'Ursine.zip';
   }
 

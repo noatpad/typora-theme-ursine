@@ -306,18 +306,14 @@ td, th {
   h1, h2, h3, h4, h5, h6 {
     &::before {
       position: absolute;
-      top: 0;
       right: calc(100% + 10px);
+      bottom: 0;
       color: $md-char-color;
       font-size: 1rem;
       font-weight: bold;
       font-variant: 'small-caps';
-    }
-  }
 
-  // Disable default header symbol
-  h3, h4, h5, h6 {
-    &::before {
+      // Disable default header symbol where applicable (h3-h6)
       border: 0;
       border-radius: 0;
       left: auto;
@@ -334,7 +330,7 @@ td, th {
 
     &::before {
       content: 'H1';
-      top: 1rem;
+      bottom: .45rem;
     }
   }
 
@@ -344,7 +340,7 @@ td, th {
 
     &::before {
       content: 'H2';
-      top: .6rem;
+      bottom: .2rem;
     }
   }
 
@@ -354,7 +350,7 @@ td, th {
 
     &::before {
       content: 'H3';
-      top: .35rem;
+      bottom: .18rem;
     }
   }
 
@@ -364,7 +360,7 @@ td, th {
 
     &::before {
       content: 'H4';
-      top: .24rem;
+      bottom: .15rem;
     }
   }
 
@@ -373,7 +369,7 @@ td, th {
     margin: 0;
 
     &::before {
-      top: .2rem;
+      bottom: .1rem;
     }
   }
 

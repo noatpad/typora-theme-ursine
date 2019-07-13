@@ -17,11 +17,11 @@ const makeZip = (cyrillic) => {
   var cssGlob, assetGlob, zipName;
   if (cyrillic) {
     cssGlob = 'css/*-cyrillic.css';
-    assetGlob = ['ursine/*.png', 'ursine/AdelleCyrillic-*.woff', 'ursine/AvenirNextCyr-*.woff']
+    assetGlob = ['ursine/*.png', 'ursine/Cousine-Regular.woff', 'ursine/AdelleCyrillic-*.woff', 'ursine/AvenirNextCyr-*.woff']
     zipName = 'Ursine_Cyrillic.zip';
   } else {
     cssGlob = ['css/*.css', '!css/*-cyrillic.css'];
-    assetGlob = ['ursine/*.png', 'ursine/Adelle-*.woff', 'ursine/AvenirNextLTPro-*.woff'];
+    assetGlob = ['ursine/*.png', 'ursine/Cousine-Regular.woff', 'ursine/Adelle-*.woff', 'ursine/AvenirNextLTPro-*.woff'];
     zipName = 'Ursine.zip';
   }
 

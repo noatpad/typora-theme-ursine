@@ -22,6 +22,7 @@ $item-hover-text-color: #fff;
 
 $sidebar-bg-color: #2e3235;
 $sidebar-text-color: #f0f0f0;
+$sidebar-file-rename-text-color: $text-color;
 $search-hit-bg-color: #db4d5230;
 $search-select-bg-color: #db4d5270;
 
@@ -60,6 +61,11 @@ sup.md-footnote {
 // Sidebar
 #typora-sidebar * {
   color: $sidebar-text-color;
+
+  // File rename
+  .file-tree-rename-input {
+      color: $sidebar-file-rename-text-color;
+  }
 }
 
 // Quick open window

@@ -18,7 +18,7 @@ $text-color: #ddd !default;
 $md-char-color: #5b5b5b !default;
 $meta-content-color: #757575 !default;
 $link-color: #6bcafb !default;
-$mark-color: #fee405 !default;
+$mark-color: #196186d0 !default;
 $code-bg-color: transparent !default;
 
 $primary-color: #428bca !default;
@@ -239,6 +239,7 @@ del { color: $md-char-color; }
 mark {
   padding: 2px 1px;
   background: $mark-color;
+  color: inherit;
 }
 
 blockquote {

@@ -60,18 +60,26 @@ const dev = () => {
   }
 
   // Watch styles
-  watch(["*.scss", "ursine/*.scss"], { ignoreInitial: false }, () => {
-    return themeLocation
-      ? buildStyles().pipe(dest(themeLocation))
-      : buildStyles();
-  });
+  watch(
+    ["*.scss", "ursine/*.scss"],
+    { ignoreInitial: false },
+    function styleWatcher() {
+      return themeLocation
+        ? buildStyles().pipe(dest(themeLocation))
+        : buildStyles();
+    }
+  );
 
   // Watch assets
-  watch(["ursine/*.(woff|png)"], { ignoreInitial: false }, () => {
-    return themeLocation
-      ? includeAssets().pipe(dest(path.join(themeLocation, "ursine")))
-      : includeAssets();
-  });
+  watch(
+    ["ursine/*.(woff|png)"],
+    { ignoreInitial: false },
+    function assetWatcher() {
+      return themeLocation
+        ? includeAssets().pipe(dest(path.join(themeLocation, "ursine")))
+        : includeAssets();
+    }
+  );
 };
 
 exports.default = parallel(buildStyles, includeAssets);

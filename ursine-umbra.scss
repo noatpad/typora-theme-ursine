@@ -44,6 +44,7 @@ $footnote-tooltip-text-color: $text-color !default;
 
 $megamenu-bg-color: $sidebar-bg-color !default;
 $megamenu-text-color: $text-color !default;
+$megamenu-hover-bg-color: $item-hover-bg-color !default;
 $megamenu-sidebar-bg-color: $bg-color !default;
 $megamenu-sidebar-hover-bg-color: #161819 !default;
 $megamenu-sidebar-active-bg-color: #101010 !default;
@@ -835,7 +836,7 @@ footer.ty-footer {
 
     &:hover {
       border-color: $primary-color;
-      background: $item-hover-bg-color;
+      background: $megamenu-hover-bg-color;
       color: $item-hover-text-color !important;
     }
   }
@@ -852,7 +853,7 @@ footer.ty-footer {
 
   &:hover {
     border-color: $primary-color;
-    background: $item-hover-bg-color;
+    background: $megamenu-hover-bg-color;
     color: $item-hover-text-color;
   }
 }
@@ -867,7 +868,7 @@ footer.ty-footer {
   }
 
   &:hover {
-    background-color: $item-hover-bg-color !important;
+    background-color: $megamenu-hover-bg-color !important;
   }
 
   &:hover td:nth-child(1) {

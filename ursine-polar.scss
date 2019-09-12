@@ -67,6 +67,11 @@ sup.md-footnote {
   .file-tree-rename-input {
       color: $sidebar-file-rename-text-color;
   }
+
+  code {
+    background: #0000001a;
+    border-color: #ffffff26;
+  }
 }
 
 // Quick open window

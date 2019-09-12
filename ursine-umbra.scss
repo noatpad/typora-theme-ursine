@@ -17,7 +17,8 @@ $md-char-color: #5b5b5b !default;
 $meta-content-color: #757575 !default;
 $link-color: #6bcafb !default;
 $mark-color: #196186d0 !default;
-$code-bg-color: transparent !default;
+$code-bg-color: #0000001a !default;
+$code-border-color: #ffffff26 !default;
 
 $primary-color: #428bca !default;
 $primary-btn-border-color: #285e8e !default;
@@ -266,7 +267,7 @@ tt {
 
 code {
   font-size: .9em;
-  border: 1px solid $accent-color;
+  border: 1px solid $code-border-color;
   border-radius: .25rem;
   padding: 0 .125rem;
   background: $code-bg-color;

@@ -57,6 +57,9 @@ const dev = () => {
     case "Windows_NT":
       themeLocation = `${process.env.APPDATA}\\Typora\\themes`;
       break;
+    case "Darwin":
+      themeLocation = `${process.env.HOME}/Library/Application Support/abnerworks.Typora/themes`
+      break;
   }
 
   // Watch styles

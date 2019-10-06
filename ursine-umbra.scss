@@ -52,6 +52,17 @@ $megamenu-sidebar-hover-bg-color: #161819 !default;
 $megamenu-sidebar-active-bg-color: #101010 !default;
 $megamenu-button-border-color: #9292928f !default;
 
+$mermaid-node-fill: $bg-color !default;
+$mermaid-node-border: $code-border-color;
+$mermaid-task-fill: #8a88c9 !default;
+$mermaid-task-border: #5f5caf !default;
+$mermaid-task-done-fill: #6b6b6b !default;
+$mermaid-task-done-border: #3d3d3d !default;
+$mermaid-task-active-fill: #737cff !default;
+$mermaid-task-active-border: #413da0 !default;
+$mermaid-task-crit-fill: #d66979 !default;
+$mermaid-task-crit-border: #8f1d22 !default;
+
 // FONT-FACES //
 
 @if $cyrillic-support {         // Cyrillic font-faces
@@ -216,6 +227,9 @@ $megamenu-button-border-color: #9292928f !default;
   --search-select-bg-color: #{$search-select-bg-color};  // background color for selected searched text
   --rawblock-edit-panel-bd: #{$accent-color};            // background color for inline HTML 'edit panel' blocks
   --monospace: #{$monospace-font};                       // monospace font for code
+
+  --node-fill: #{$mermaid-node-fill};
+  --node-border: #{$mermaid-node-border};
 }
 
 // STYLING //
@@ -605,6 +619,74 @@ td, th {
     background: $search-select-bg-color;
     border: 1px solid $megamenu-button-border-color;
     padding: 0 1px;
+  }
+
+  // Mermain diagrams
+  pre[lang="mermaid"] {
+    .md-diagram-panel {
+      border-color: $code-border-color;
+    }
+
+    tspan {
+      fill: $text-color;
+    }
+
+    &[mermaid-type="graph"] path.path {
+      marker-end: url("#arrowhead");
+    }
+
+    &[mermaid-type="gantt"] {
+      @for $i from 1 to 20 {
+        .section#{$i} {
+          @if $i % 2 == 0 {
+            fill: $accent-color;
+          } @else {
+            fill: transparent;
+          }
+        }
+      }
+
+      .task {
+        fill: $mermaid-task-fill;
+        stroke: $mermaid-task-border;
+
+        &[class*="done"] {
+          fill: $mermaid-task-done-fill;
+          stroke: $mermaid-task-done-border;
+        }
+
+        &[class*="active"] {
+          fill: $mermaid-task-active-fill;
+          stroke: $mermaid-task-active-border;
+        }
+
+        &[class*="crit"] {
+          fill: $mermaid-task-crit-fill;
+          stroke: $mermaid-task-crit-border;
+        }
+
+        &[class*="Crit"] {
+          stroke: $mermaid-task-crit-border;
+        }
+      }
+
+      text {
+        fill: $text-color;
+
+        &[class*="activeText"], &[class*="activeCritText"] {
+          fill: $text-color !important;
+          font-weight: bold;
+        }
+
+        &[class*="doneText"], &[class*="doneCritText"] {
+          fill: $md-char-color !important;
+        }
+      }
+
+      .grid .tick line {
+        stroke: $text-color;
+      }
+    }
   }
 }
 

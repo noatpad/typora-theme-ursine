@@ -41,6 +41,17 @@ $megamenu-sidebar-hover-bg-color: #161819;
 $megamenu-sidebar-active-bg-color: #101010;
 $megamenu-button-border-color: #9292928f;
 
+$mermaid-node-fill: $bg-color !default;
+$mermaid-node-border: $code-border-color;
+$mermaid-task-fill: #bfbee2 !default;
+$mermaid-task-border: #9d9bce !default;
+$mermaid-task-done-fill: #d5d5d5 !default;
+$mermaid-task-done-border: #929292 !default;
+$mermaid-task-active-fill: #bcc0ff !default;
+$mermaid-task-active-border: #7f7ccd !default;
+$mermaid-task-crit-fill: #ebb5bd !default;
+$mermaid-task-crit-border: #d45c62 !default;
+
 // IMPORTS //
 
 // Inherit Ursine Umbra styling

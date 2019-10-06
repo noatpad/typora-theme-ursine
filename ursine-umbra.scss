@@ -631,10 +631,12 @@ td, th {
       fill: $text-color;
     }
 
+    // Mermaid graphs diagrams
     &[mermaid-type="graph"] path.path {
       marker-end: url("#arrowhead");
     }
 
+    // Mermaid Gantt diagrams
     &[mermaid-type="gantt"] {
       @for $i from 1 to 20 {
         .section#{$i} {
@@ -687,6 +689,21 @@ td, th {
         stroke: $text-color;
       }
     }
+  }
+}
+
+// Modals
+.modal-content {
+  .modal-header, .modal-footer {
+    border-color: $md-char-color;
+  }
+
+  input, button.btn-default {
+    border-color: $md-char-color;
+  }
+
+  input {
+    background: transparent;
   }
 }
 

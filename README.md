@@ -61,7 +61,7 @@ gulp
 
 The compiled CSS files will be located in the `/dist` directory once complete.
 
-Three is also a `dev` script that will watch the files and assets & update your themes in your themes folder directly as you save your changes. Simply run `gulp dev` to do so (and remember to reselect the theme in Typora afterwards to see the changes).
+Three is also a `dev` script that will watch the files and assets & update your themes in your themes folder directly as you save your changes. Simply run `gulp dev` to do so (and remember to reselect the theme in Typora afterwards to see the changes). Note that this currently only works on **MacOS and Windows only** (I'll add Linux support once someone requests it because I have no idea where the theme is saved in that one).
 
 ### Related
 

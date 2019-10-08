@@ -26,7 +26,7 @@ Decompress the latest release from [here](https://github.com/aCluelessDanny/typo
 
 I slightly debated on this, and hey, I don't see why not. If you find this theme really useful and you're feeling super generous, *how 'bout donating a coffee?*
 
-Ever since publishing this theme, I've periodically refined it overtime through the issues sent to this repo (I *maaay* have spent a bit too much time on this during some of my classes back then).
+Ever since publishing this theme, I've periodically refined it overtime through the issues on my free time (and I *maaay* have spent a bit too much time on this during some of my classes back then).
 
 So if you wanna show appreciation that way, just know that this college boy would appreciate that generosity greatly~
 
@@ -35,16 +35,26 @@ So if you wanna show appreciation that way, just know that this college boy woul
 ## Preview
 
 <details>
-<summary>Click here to preview themes</summary>
+<summary>Ursine Polar</summary>
 
-Ursine Polar | Ursine Umbra
-:---:|:---:
-![Polar Preview 1](images/polar-1.png) | ![Umbra Preview 1](images/umbra-1.png)
-![Polar Preview 2](images/polar-2.png) | ![Umbra Preview 2](images/umbra-2.png)
-![Polar Preview 3](images/polar-3.png) | ![Umbra Preview 3](images/umbra-3.png)
-![Polar Splashscreen](images/polar-splashscreen.png) | ![Umbra Splashscreen](images/umbra-splashscreen.png)
-![Polar Source Code Preview](images/polar-source.png) | ![Umbra Source Code Preview](images/umbra-source.png)
-![Polar Unibody Preview](images/polar-unibody.png) | ![Umbra Unibody Preview](images/umbra-unibody.png)
+![Polar Preview 1](images/polar-1.png)
+![Polar Preview 2](images/polar-2.png)
+![Polar Preview 3](images/polar-3.png)
+![Polar Source Code Preview](images/polar-source.png)
+![Polar Unibody Preview](images/polar-unibody.png)
+![Polar Splashscreen](images/polar-splashscreen.png)
+
+</details>
+
+<details>
+<summary>Ursine Umbra</summary>
+
+![Umbra Preview 1](images/umbra-1.png)
+![Umbra Preview 2](images/umbra-2.png)
+![Umbra Preview 3](images/umbra-3.png)
+![Umbra Source Code Preview](images/umbra-source.png)
+![Umbra Unibody Preview](images/umbra-unibody.png)
+![Umbra Splashscreen](images/umbra-splashscreen.png)
 
 </details>
 

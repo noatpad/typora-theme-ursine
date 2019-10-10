@@ -477,12 +477,20 @@ td, th {
     }
 
     > p {
-      transition: color $transition-duration;
+      transition: color $transition-duration, opacity $transition-duration;
     }
 
     &.task-list-done > p {
       color: $md-char-color;
       text-decoration: line-through;
+
+      > .md-emoji {
+        opacity: .5;
+      }
+
+      > .md-link > a {
+        opacity: .6;
+      }
     }
   }
 

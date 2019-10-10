@@ -1,5 +1,7 @@
+
 // SCSS VARIABLES //
 
+// Important colors for writing (text, links, code, etc.)
 $bg-color: #fbfbfb;
 $text-color: #333;
 $md-char-color: #b4b4b4;
@@ -9,22 +11,26 @@ $mark-color: #d3ffa4;
 $code-bg-color: #00000008;
 $code-border-color: #0000001a;
 
+// Button and table colors
 $primary-color: #db4d52;
 $primary-btn-border-color: #be2f34;
 $accent-color: #d0d0d0;
 $table-head-color: #d0d0d0;
 
+// Active and hover colors
 $active-file-bg-color: #16161a;
 $active-search-item-bg-color: #23242b;
 $item-hover-bg-color: #202020;
 $item-hover-text-color: inherit;
 
+// Sidebar colors
 $sidebar-bg-color: #2e3235;
 $sidebar-text-color: #f0f0f0;
 $sidebar-file-rename-text-color: $text-color;
 $search-hit-bg-color: #db4d5230;
 $search-select-bg-color: #db4d5270;
 
+// Tooltip and footnote colors
 $tooltip-bg-color: $bg-color;
 $tooltip-text-color: $text-color;
 $tooltip-border-color: #00000040;
@@ -32,6 +38,7 @@ $footnote-sup-bg-color: #f0f0f0;
 $footnote-tooltip-bg-color: #222;
 $footnote-tooltip-text-color: $sidebar-text-color;
 
+// Megamenu colors
 $megamenu-bg-color: $bg-color;
 $megamenu-text-color: $text-color;
 $megamenu-hover-bg-color: #d8d8d8;
@@ -41,16 +48,17 @@ $megamenu-sidebar-hover-bg-color: #161819;
 $megamenu-sidebar-active-bg-color: #101010;
 $megamenu-button-border-color: #9292928f;
 
-$mermaid-node-fill: $bg-color !default;
+// Mermaid colors
+$mermaid-node-fill: $bg-color;
 $mermaid-node-border: $code-border-color;
-$mermaid-task-fill: #bfbee2 !default;
-$mermaid-task-border: #9d9bce !default;
-$mermaid-task-done-fill: #d5d5d5 !default;
-$mermaid-task-done-border: #929292 !default;
-$mermaid-task-active-fill: #bcc0ff !default;
-$mermaid-task-active-border: #7f7ccd !default;
-$mermaid-task-crit-fill: #ebb5bd !default;
-$mermaid-task-crit-border: #d45c62 !default;
+$mermaid-task-fill: #bfbee2;
+$mermaid-task-border: #9d9bce;
+$mermaid-task-done-fill: #d5d5d5;
+$mermaid-task-done-border: #929292;
+$mermaid-task-active-fill: #bcc0ff;
+$mermaid-task-active-border: #7f7ccd;
+$mermaid-task-crit-fill: #ebb5bd;
+$mermaid-task-crit-border: #d45c62;
 
 // IMPORTS //
 

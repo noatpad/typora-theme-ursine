@@ -1,6 +1,9 @@
 
 // SCSS VARIABLES //
 
+// Umbra or Polar?
+$umbra: false;
+
 // Important colors for writing (text, links, code, etc.)
 $bg-color: #fbfbfb;
 $text-color: #333;
@@ -62,7 +65,6 @@ $mermaid-task-crit-border: #d45c62;
 
 // IMPORTS //
 
-// Inherit Ursine Umbra styling
 @import 'ursine-umbra';
 @import 'ursine/code-3024-day';
 

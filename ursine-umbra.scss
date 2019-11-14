@@ -35,11 +35,12 @@ $table-head-color: #4d4d4d !default;
 // Active and hover colors
 $active-file-bg-color: #16161a !default;
 $active-search-item-bg-color: #212121 !default;
-$item-hover-bg-color: $bg-color !default;
+$item-hover-bg-color: #2e2e2e !default;
 $item-hover-text-color: #fff !default;
 
 // Sidebar colors
 $sidebar-bg-color: #2b2b2b !default;
+$sidebar-bg-hover-color: $bg-color !default;
 $sidebar-border-color: #19191c !default;
 $sidebar-text-color: $text-color !default;
 $search-hit-bg-color: #428bca40 !default;
@@ -765,6 +766,22 @@ td, th {
   }
 }
 
+// Outline Dropdown (MacOS)
+#toc-dropmenu {
+  padding: .25em 0;
+  background: $bg-color;
+
+  // Disable the divider
+  .outline-title-divider {
+    display: none;
+  }
+}
+
+// Disable underlining in outline items
+.outline-label:hover {
+  text-decoration: none;
+}
+
 // Tooltips
 .ty-tooltip {
   background: $tooltip-bg-color;
@@ -855,6 +872,10 @@ td, th {
     .outline-h1 > .outline-item {
       font-family: unquote($header-font);
     }
+
+    .outline-item:hover {
+      background: $sidebar-bg-hover-color;
+    }
   }
 
   .outline-title-wrapper,
@@ -870,7 +891,7 @@ td, th {
 
   .file-tree-node.file-library-file-node:not(.active):hover .file-node-background,
   .file-list-item.file-library-node:not(.active):hover {
-    background: $item-hover-bg-color;
+    background: $sidebar-bg-hover-color;
   }
 
   .file-tree-node.file-library-file-node.active .file-node-background,

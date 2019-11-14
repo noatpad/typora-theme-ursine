@@ -23,12 +23,13 @@ $table-head-color: #d0d0d0;
 // Active and hover colors
 $active-file-bg-color: #16161a;
 $active-search-item-bg-color: #23242b;
-$item-hover-bg-color: #202020;
+$item-hover-bg-color: #ececec;
 $item-hover-text-color: inherit;
 
 // Sidebar colors
 $sidebar-bg-color: #2e3235;
 $sidebar-text-color: #f0f0f0;
+$sidebar-bg-hover-color: #202020 !default;
 $sidebar-file-rename-text-color: $text-color;
 $search-hit-bg-color: #db4d5230;
 $search-select-bg-color: #db4d5270;
@@ -86,7 +87,7 @@ sup.md-footnote {
 
   // File rename
   .file-tree-rename-input {
-      color: $sidebar-file-rename-text-color;
+    color: $sidebar-file-rename-text-color;
   }
 
   code {

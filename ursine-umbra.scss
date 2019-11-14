@@ -7,7 +7,7 @@ $umbra: true !default;
 // Font variables
 $paragraph-font: "'Avenir Next LT Pro', 'Lato', sans-serif";
 $header-font: "'Adelle', 'Times New Roman', serif";
-$monospace-font: "'Cousine', 'Consolas', monospace";
+$monospace-font: "'Fira Mono', 'Cousine', 'Consolas', monospace";
 
 // Cyrillic font support
 $cyrillic-support: false !default;
@@ -200,13 +200,13 @@ $mermaid-task-crit-border: #8f1d22 !default;
   }
 }
 
-// Cousine provided by Steve Matteson from Google Fonts
-// Downloaded from `https://fonts.google.com/specimen/Cousine`
+// Fira Mono provided by Carrois Apostrophe from Google Fonts
+// Downloaded from `https://fonts.google.com/specimen/Fira+Mono`
 @font-face {
-  font-family: 'Cousine';
+  font-family: 'Fira Mono';
   font-style: normal;
   font-weight: normal;
-  src: local('Cousine Regular'), url('./ursine/Cousine-Regular.woff') format('woff');
+  src: local('Fira Mono Regular'), url('./ursine/FiraMono-Regular.ttf') format('ttf');
 }
 
 // IMPORTS //

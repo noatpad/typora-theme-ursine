@@ -908,6 +908,14 @@ td, th {
 
     .sidebar-footer-item {
       transition: background .3s;
+
+      &:hover {
+        background: $sidebar-bg-hover-color;
+      }
+    }
+
+    .dropdown-menu > li > a:hover {
+      background: $sidebar-bg-hover-color;
     }
   }
 }

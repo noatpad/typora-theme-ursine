@@ -64,7 +64,7 @@ $megamenu-sidebar-hover-bg-color: #161819 !default;
 $megamenu-sidebar-active-bg-color: #101010 !default;
 $megamenu-button-border-color: #9292928f !default;
 
-// Mermaid colors
+// Mermaid diagram colors
 $mermaid-node-fill: $bg-color !default;
 $mermaid-node-border: $code-border-color !default;
 $mermaid-task-fill: #8a88c9 !default;
@@ -642,7 +642,7 @@ td, th {
     padding: 0 1px;
   }
 
-  // Mermain diagrams
+  // Mermaid diagrams
   pre[lang="mermaid"] {
     .md-diagram-panel {
       border-color: $code-border-color;
@@ -653,12 +653,22 @@ td, th {
     }
 
     // Mermaid graphs diagrams
-    &[mermaid-type="graph"] path.path {
-      marker-end: url("#arrowhead");
+    &[mermaid-type="graph"] {
+      path.path {
+        & ~ defs marker {
+          fill: $text-color;
+        }
+      }
+
+      .cluster rect {
+        fill: transparent !important;
+        stroke: $mermaid-node-border !important;
+      }
     }
 
     // Mermaid Gantt diagrams
     &[mermaid-type="gantt"] {
+      // NOTE: Not the best, but I can't target with :nth-child(2n)
       @for $i from 1 to 20 {
         .section#{$i} {
           @if $i % 2 == 0 {

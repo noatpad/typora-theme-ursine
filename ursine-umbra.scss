@@ -384,25 +384,21 @@ td, th {
     width: auto;
   }
 
+  // Disable default header symbol where applicable (h3-h6)
+  h3, h4, h5, h6 {
+    &::before { display: none; }
+  }
+
   // Headers
   h1, h2, h3, h4, h5, h6 {
-    &::before {
+    &::after {
       position: absolute;
-      right: calc(100% + 10px);
-      bottom: 0;
+      right: calc(100% + .75em);
+      top: 0;
       color: $md-char-color;
       font-size: 1rem;
       font-weight: bold;
       font-variant: 'small-caps';
-
-      // Disable default header symbol where applicable (h3-h6)
-      border: 0;
-      border-radius: 0;
-      left: auto;
-      float: none;
-      padding: 0;
-      vertical-align: baseline;
-      line-height: 20px;
     }
   }
 
@@ -410,9 +406,9 @@ td, th {
     font-size: 1.8rem;
     margin: 1rem 0;
 
-    &::before {
+    &::after {
       content: 'H1';
-      bottom: .45rem;
+      top: .87rem;
     }
   }
 
@@ -420,9 +416,9 @@ td, th {
     font-size: 1.4rem;
     margin: .7rem 0;
 
-    &::before {
+    &::after {
       content: 'H2';
-      bottom: .2rem;
+      top: .43rem;
     }
   }
 
@@ -430,9 +426,9 @@ td, th {
     font-size: 1.2rem;
     margin: .5rem 0;
 
-    &::before {
+    &::after {
       content: 'H3';
-      bottom: .18rem;
+      top: .2rem;
     }
   }
 
@@ -440,26 +436,22 @@ td, th {
     font-size: 1.1rem;
     margin: .2rem 0;
 
-    &::before {
+    &::after {
       content: 'H4';
-      bottom: .15rem;
+      top: .07rem;
     }
   }
 
   h5, h6 {
     font-size: 1rem;
     margin: 0;
-
-    &::before {
-      bottom: .1rem;
-    }
   }
 
-  h5::before {
+  h5::after {
     content: 'H5';
   }
 
-  h6::before {
+  h6::after {
     content: 'H6';
   }
 

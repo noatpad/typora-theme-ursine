@@ -69,7 +69,10 @@ const dev = () => {
       themeLocation = `${process.env.APPDATA}\\Typora\\themes`;
       break;
     case "Darwin":
-      themeLocation = `${process.env.HOME}/Library/Application Support/abnerworks.Typora/themes`
+      themeLocation = `${process.env.HOME}/Library/Application Support/abnerworks.Typora/themes`;
+      break;
+    case "Linux":
+      themeLocation = "~/.config/Typora/themes";
       break;
   }
 

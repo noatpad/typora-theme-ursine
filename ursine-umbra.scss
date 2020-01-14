@@ -10,10 +10,17 @@ $header-font: "'Adelle', 'Times New Roman', serif";
 $monospace-font: "'Fira Mono', 'Cousine', 'Consolas', monospace";
 
 // Cyrillic font support
-$cyrillic-support: false !default;
-@if $cyrillic-support {
+$cyrillic-font: false !default;
+@if $cyrillic-font {
   $paragraph-font: "'Avenir Next Cyr', 'Lato', sans-serif";
   $header-font: "'Adelle Cyrillic', 'Times New Roman', serif";
+}
+
+// Alternative font support (supports Cyrillic, Greek, Vietnamese, among others)
+$alt-font: false !default;
+@if $alt-font {
+  $paragraph-font: "'Open Sans', 'Lato', sans-serif";
+  $header-font: "'Roboto Slab', 'Times New Roman', serif";
 }
 
 // Important colors for writing (text, links, code, etc.)
@@ -78,7 +85,7 @@ $mermaid-task-crit-border: #8f1d22 !default;
 
 // FONT-FACES //
 
-@if $cyrillic-support {         // Cyrillic font-faces
+@if $cyrillic-font {         // Cyrillic font-faces
   // Avenir Next Cyr provided by Adrian Frutiger and Akira Kobayashi.
   // Downloaded from `https://www.cufonfonts.com/font/avenir-next-cyr`
   @font-face {
@@ -137,6 +144,52 @@ $mermaid-task-crit-border: #8f1d22 !default;
     font-style: italic;
     font-weight: bold;
     src: local("Adelle Cyrillic SemiBold Italic"), url("./ursine/AdelleCyrillic-SemiBoldItalic.woff") format("woff");
+  }
+} @else if $alt-font {       // Alternative font
+  // Open Sans provided by Steve Matteson
+  // Downloaded from `https://fonts.google.com/specimen/Open+Sans`
+  @font-face {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Open Sans Regular"), url("./ursine/OpenSans-Regular.ttf") format("ttf");
+  }
+
+  @font-face {
+    font-family: "Open Sans";
+    font-style: italic;
+    font-weight: normal;
+    src: local("Open Sans Light Italic"), url("./ursine/OpenSans-LightItalic.ttf") format("ttf");
+  }
+
+  @font-face {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: bold;
+    src: local("Open Sans SemiBold"), url("./ursine/OpenSans-SemiBold.ttf") format("ttf");
+  }
+
+  @font-face {
+    font-family: "Open Sans";
+    font-style: italic;
+    font-weight: bold;
+    src: local("Open Sans Italic"), url("./ursine/OpenSans-Italic.ttf") format("ttf");
+  }
+
+  // Roboto Slab provided by Christian Robertson
+  // Downloaded from `https://fonts.google.com/specimen/Roboto+Slab`
+  @font-face {
+    font-family: "Roboto Slab";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Roboto Slab Extra Light"), url("./ursine/RobotoSlab-ExtraLight.ttf") format("ttf");
+  }
+
+  @font-face {
+    font-family: "Roboto Slab";
+    font-style: normal;
+    font-weight: bold;
+    src: local("Roboto Slab Regular"), url("./ursine/RobotoSlab-Regular.ttf") format("ttf");
   }
 } @else {               // Normal font-faces
   // Avenir Next LT Pro provided by Adrian Frutiger and Akira Kobayashi.

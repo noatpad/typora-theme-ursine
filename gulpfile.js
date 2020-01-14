@@ -43,7 +43,7 @@ const includeAssets = () => {
   const alt = src([
     "ursine/*.png",
     "ursine/Cousine-Regular.woff",
-    "ursine/RobotoSlab-*t.ttf",
+    "ursine/RobotoSlab-*.ttf",
     "ursine/OpenSans-*.ttf"
   ]).pipe(dest("dist/ursine-alt/ursine"));
 

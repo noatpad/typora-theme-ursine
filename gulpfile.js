@@ -10,7 +10,7 @@ const buildStyles = () => {
   console.log("Compiling CSS files...");
   sass.compiler = require("node-sass");
 
-  const regular = src(["*.scss", "!*-cyrillic.scss"])
+  const regular = src(["*.scss", "!*-cyrillic.scss", "!*-alt.scss"])
     .pipe(sass({ outputStyle: "expanded" }).on("error", sass.logError))
     .pipe(dest("dist/ursine"));
 
@@ -18,7 +18,11 @@ const buildStyles = () => {
     .pipe(sass({ outputStyle: "expanded" }).on("error", sass.logError))
     .pipe(dest("dist/ursine-cyrillic"));
 
-  return merge(regular, cyrillic);
+  const alt = src("*-alt.scss")
+    .pipe(sass({ outputStyle: "expanded" })).on("error", sass.logError)
+    .pipe(dest("dist/ursine-alt"));
+
+  return merge(regular, cyrillic, alt);
 };
 
 const includeAssets = () => {
@@ -36,19 +40,26 @@ const includeAssets = () => {
     "ursine/AvenirNextCyr-*.woff"
   ]).pipe(dest("dist/ursine-cyrillic/ursine"));
 
+  const alt = src([
+    "ursine/*.png",
+    "ursine/Cousine-Regular.woff",
+    "ursine/RobotoSlab-*t.ttf",
+    "ursine/OpenSans-*.ttf"
+  ]).pipe(dest("dist/ursine-alt/ursine"));
+
   console.log("Including assets...");
-  return merge(regular, cyrillic);
+  return merge(regular, cyrillic, alt);
 };
 
 const makeZip = () => {
   const regular = src("dist/ursine/**").pipe(zip("Ursine.zip"));
 
-  const cyrillic = src("dist/ursine-cyrillic/**").pipe(
-    zip("Ursine_Cyrillic.zip")
-  );
+  const cyrillic = src("dist/ursine-cyrillic/**").pipe(zip("Ursine_Cyrillic.zip"));
+
+  const alt = src("dist/ursine-alt/**").pipe(zip("Ursine_Alt.zip"));
 
   console.log(`Building releases...`);
-  return merge(regular, cyrillic).pipe(dest("./release"));
+  return merge(regular, cyrillic, alt).pipe(dest("./release"));
 };
 
 const dev = () => {
@@ -75,7 +86,7 @@ const dev = () => {
 
   // Watch assets
   watch(
-    ["ursine/*.(woff|png)"],
+    ["ursine/*.(ttf|woff|png)"],
     { ignoreInitial: false },
     function assetWatcher() {
       return themeLocation

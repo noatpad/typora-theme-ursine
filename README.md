@@ -20,6 +20,15 @@ Code fence themes are adapted from CodeMirror's *3024 Day* and *Dracula* themes 
 
 Decompress the latest release from [here](https://github.com/aCluelessDanny/typora-theme-ursine/releases). In Typora's preferences windows, go to `General -> Themes` and click on `Open Theme Folder`. Drop all the decompressed files and folders in there, and enjoy!~
 
+#### Which one should I download?
+
+There are 3 different "packs" that you can download. The only thing that differentiates between them is the fonts they use.
+
+- `Ursine.zip`: This is usually the one you want to download, as it has the base fonts shown in the pictures. Try this one first if you're unsure.
+- `Ursine_Cyrillic.zip`: These fonts are a direct variation of the base fonts above, & they offer the exact same look as shown in the pictures. Download this one if you require Cyrillic fonts.
+- `Ursine_Alt.zip`: These fonts are _similar_ to the ones mentioned above, but they are compatible with more languages, including Greek, Viatnamese, & Cyrillic. Use this if you need that language support.
+  - These alternative fonts are [Roboto Slab](https://fonts.google.com/specimen/Roboto+Slab) for headers and quotes, & [Open Sans](https://fonts.google.com/specimen/Open+Sans) for paragraph text.
+
 *Note:* If you require using Cyrillic-compatible fonts, then download the Cyrillic variant found in the release instead.
 
 ### Like the theme a lot?

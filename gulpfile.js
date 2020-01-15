@@ -28,21 +28,21 @@ const buildStyles = () => {
 const includeAssets = () => {
   const regular = src([
     "ursine/*.png",
-    "ursine/Cousine-Regular.woff",
+    "ursine/FiraMono-*.ttf",
     "ursine/Adelle-*.woff",
     "ursine/AvenirNextLTPro-*.woff"
   ]).pipe(dest("dist/ursine/ursine"));
 
   const cyrillic = src([
     "ursine/*.png",
-    "ursine/Cousine-Regular.woff",
+    "ursine/FiraMono-*.ttf",
     "ursine/AdelleCyrillic-*.woff",
     "ursine/AvenirNextCyr-*.woff"
   ]).pipe(dest("dist/ursine-cyrillic/ursine"));
 
   const alt = src([
     "ursine/*.png",
-    "ursine/Cousine-Regular.woff",
+    "ursine/FiraMono-*.ttf",
     "ursine/RobotoSlab-*.ttf",
     "ursine/OpenSans-*.ttf"
   ]).pipe(dest("dist/ursine-alt/ursine"));

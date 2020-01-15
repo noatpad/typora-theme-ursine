@@ -262,6 +262,13 @@ $mermaid-task-crit-border: #8f1d22 !default;
   src: local('Fira Mono Regular'), url('./ursine/FiraMono-Regular.ttf') format('ttf');
 }
 
+@font-face {
+  font-family: 'Fira Mono';
+  font-style: normal;
+  font-weight: bold;
+  src: local('Fira Mono Bold'), url('./ursine/FiraMono-Bold.ttf') format('ttf');
+}
+
 // IMPORTS //
 
 @import 'ursine/code-dracula';

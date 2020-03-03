@@ -985,28 +985,31 @@ td, th {
 }
 
 // Windows-specific context, buttons, and dropdowns
-%windows-context-and-dropdowns {
-  background: $tooltip-text-color !important;
-  color: $tooltip-bg-color !important;
-}
-
 .dropdown-menu {
+  background: $sidebar-bg-color;
+  color: $text-color;
+
   .active a,
-  .has-extra-menu.active a,
+  .has-extra-menu.active a {
+    background: $bg-color !important;
+  }
+
   .has-btn-submenu .menu-style-btn.active {
-    @extend %windows-context-and-dropdowns;
+    background: $item-hover-text-color;
+    color: $item-hover-bg-color;
+    cursor: pointer;
   }
 }
 
 #footer-word-count-info .ty-footer-word-count-all tr:hover,
 #ty-spell-check-dict-missing-menu li:hover {
-  @extend %windows-context-and-dropdowns;
+  background: $sidebar-bg-color !important;
 }
 
 .ty-spell-check-panel-item {
   &.ty-active,
   &:hover {
-    @extend %windows-context-and-dropdowns;
+    background: $sidebar-bg-color !important;
   }
 }
 
@@ -1016,11 +1019,15 @@ td, th {
 
 // Windows Unibody
 footer.ty-footer {
-  border-top: 0;
+  border-top: 1px solid black;
+}
+
+.typora-sourceview-on #toggle-sourceview-btn {
+  background: $bg-color;
 }
 
 .footer-item:hover {
-  @extend %windows-context-and-dropdowns;
+  background: $sidebar-bg-color !important;
 }
 
 #outline-btn:hover {

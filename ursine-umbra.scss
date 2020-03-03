@@ -53,6 +53,7 @@ $sidebar-border-color: #19191c !default;
 $sidebar-text-color: $text-color !default;
 $search-hit-bg-color: #428bca40 !default;
 $search-select-bg-color: #428bca90 !default;
+$files-menu-hover-color: $bg-color !default;
 
 // Tooltip and footnote colors
 $tooltip-bg-color: $sidebar-bg-color !default;
@@ -984,14 +985,37 @@ td, th {
       }
     }
 
-    .dropdown-menu > li > a:hover {
-      background: $dropdown-hover-bg-color;
+    // Files menu
+    #sidebar-files-menu {
+      .menuitem-group-label {
+        font-style: italic;
+      }
+
+      .show + .menuitem-group-label.show {
+        border-color: $files-menu-hover-color;
+      }
+
+      li > a:hover {
+        background: $files-menu-hover-color;
+      }
+
+      .ty-side-sort-btn {
+        cursor: pointer;
+
+        &.active, &:hover {
+          color: $primary-color;
+        }
+
+        &.active {
+          background: $active-file-bg-color;
+        }
+      }
     }
   }
 }
 
 // Windows-specific context, buttons, and dropdowns
-.dropdown-menu:not(.megamenu-menu-list) {
+.dropdown-menu:not(.megamenu-menu-list):not(#sidebar-files-menu) {
   background: $dropdown-bg-color;
   color: $text-color;
 

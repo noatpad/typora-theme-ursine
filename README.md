@@ -24,12 +24,13 @@ Decompress the latest release from [here](https://github.com/aCluelessDanny/typo
 
 There are 3 different "packs" that you can download. The only thing that differentiates between them is the fonts they use.
 
-- `Ursine.zip`: This is usually the one you want to download, as it has the base fonts shown in the pictures. Try this one first if you're unsure.
-- `Ursine_Cyrillic.zip`: These fonts are a direct variation of the base fonts above, & they offer the exact same look as shown in the pictures. Download this one if you require Cyrillic fonts.
-- `Ursine_Alt.zip`: These fonts are _similar_ to the ones mentioned above, but they are compatible with more languages, including Greek, Viatnamese, & Cyrillic. Use this if you need that language support.
-  - These alternative fonts are [Roboto Slab](https://fonts.google.com/specimen/Roboto+Slab) for headers and quotes, & [Open Sans](https://fonts.google.com/specimen/Open+Sans) for paragraph text.
+| Pack | Use case |
+| - | - |
+| **`Ursine.zip`** | This is usually the one you want to download, as it has the base fonts shown in the pictures. Try this one first if you're unsure. |
+| **`Ursine_Cyrillic.zip`** | These fonts are a direct variation of the base fonts above, & they offer the exact same look as shown in the pictures. Download this one if you require Cyrillic fonts. |
+| **`Ursine_Alt.zip`** | These fonts are _similar_ to the ones mentioned above, but they are compatible with more languages, including Greek, Viatnamese, & Cyrillic. Use this if you need that language support.
 
-*Note:* If you require using Cyrillic-compatible fonts, then download the Cyrillic variant found in the release instead.
+*Note:* The alternative fonts in `Ursine_Alt` are [Roboto Slab](https://fonts.google.com/specimen/Roboto+Slab) for headers and quotes, & [Open Sans](https://fonts.google.com/specimen/Open+Sans) for paragraph text.
 
 ### Like the theme a lot?
 
@@ -80,7 +81,7 @@ gulp
 
 The compiled CSS files will be located in the `/dist` directory once complete.
 
-Three is also a `dev` script that will watch the files and assets & update your themes in your themes folder directly as you save your changes. Simply run `gulp dev` to do so (and remember to reselect the theme in Typora afterwards to see the changes). Note that this currently only works on **MacOS and Windows only** (I'll add Linux support once someone requests it because I have no idea where the theme is saved in that one).
+Three is also a `dev` script that will watch the files and assets & update your themes in your themes folder directly as you save your changes. Simply run `gulp dev` to do so (and remember to reselect the theme in Typora afterwards to see the changes).
 
 ### Related
 

@@ -62,6 +62,11 @@ $footnote-sup-bg-color: #111 !default;
 $footnote-tooltip-bg-color: #111 !default;
 $footnote-tooltip-text-color: $text-color !default;
 
+// Dropdown and footer colors
+$dropdown-bg-color: $sidebar-bg-color !default;
+$dropdown-hover-bg-color: $bg-color !default;
+$footer-hover-color: $sidebar-bg-color !default;
+
 // Megamenu colors
 $megamenu-bg-color: $sidebar-bg-color !default;
 $megamenu-text-color: $text-color !default;
@@ -979,37 +984,37 @@ td, th {
     }
 
     .dropdown-menu > li > a:hover {
-      background: $sidebar-bg-hover-color;
+      background: $dropdown-hover-bg-color;
     }
   }
 }
 
 // Windows-specific context, buttons, and dropdowns
-.dropdown-menu {
-  background: $sidebar-bg-color;
+.dropdown-menu:not(.megamenu-menu-list) {
+  background: $dropdown-bg-color;
   color: $text-color;
 
   .active a,
   .has-extra-menu.active a {
-    background: $bg-color !important;
+    background: $dropdown-hover-bg-color !important;
   }
 
   .has-btn-submenu .menu-style-btn.active {
-    background: $item-hover-text-color;
-    color: $item-hover-bg-color;
+    background: $text-color;
+    color: $dropdown-bg-color;
     cursor: pointer;
   }
 }
 
 #footer-word-count-info .ty-footer-word-count-all tr:hover,
 #ty-spell-check-dict-missing-menu li:hover {
-  background: $sidebar-bg-color !important;
+  background: $dropdown-hover-bg-color !important;
 }
 
 .ty-spell-check-panel-item {
   &.ty-active,
   &:hover {
-    background: $sidebar-bg-color !important;
+    background: $dropdown-hover-bg-color !important;
   }
 }
 
@@ -1027,7 +1032,7 @@ footer.ty-footer {
 }
 
 .footer-item:hover {
-  background: $sidebar-bg-color !important;
+  background: $footer-hover-color !important;
 }
 
 #outline-btn:hover {

@@ -960,6 +960,29 @@ td, th {
     transition: background .4s;
   }
 
+  .file-tree-node {
+    padding-left: .75em;
+
+    i, span {
+      vertical-align: middle;
+    }
+
+    .file-node-icon, .file-node-title {
+      margin-left: 2px;
+    }
+
+    .file-tree-node:not(.file-library-file-node) {
+      & > .file-node-content {
+        font-style: italic;
+      }
+    }
+
+    &.file-node-root > .file-node-content {
+      font-weight: bold;
+      font-style: italic;
+    }
+  }
+
   .file-tree-node.file-library-file-node:not(.active):hover .file-node-background,
   .file-list-item.file-library-node:not(.active):hover {
     background: $sidebar-bg-hover-color;

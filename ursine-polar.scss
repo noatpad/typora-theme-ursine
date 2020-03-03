@@ -44,9 +44,10 @@ $footnote-tooltip-bg-color: #222;
 $footnote-tooltip-text-color: $sidebar-text-color;
 
 // Dropdown and footer colors
-$dropdown-bg-color: $bg-color !default;
-$dropdown-hover-bg-color: #e6e6e6 !default;
-$footer-hover-color: #e6e6e6 !default;
+$dropdown-bg-color: $bg-color;
+$dropdown-hover-bg-color: #e6e6e6;
+$dropdown-divider-color: #e6e6e6;
+$footer-hover-color: #e6e6e6;
 
 // Megamenu colors
 $megamenu-bg-color: $bg-color;

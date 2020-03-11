@@ -478,9 +478,11 @@ td, th {
 
     > li {
       color: $primary-color;
+      font-weight: bold;
 
       > * {
         color: $text-color;
+        font-weight: normal;
       }
 
       > *:not(ol):not(ul) {

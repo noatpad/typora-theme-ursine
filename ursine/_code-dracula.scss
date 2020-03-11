@@ -8,26 +8,26 @@
 
 @if $umbra {
   .cm-s-inner {
-    padding: .5rem .2rem;
     border: 1px solid var(--accent-color) !important;
     border-radius: .25rem;
 
     &.CodeMirror, .CodeMirror-gutters {
       background-color: #282a36 !important;
       color: #f8f8f2 !important;
-      border: none;
     }
 
     .CodeMirror-gutters {
       width: 5ch;
       color: #6d8a88;
+      background: #1a1b28 !important;
+      border-right: 1px solid #6d8a889f;
     }
 
     .CodeMirror-cursor { border-left: solid thin #f8f8f2 !important; }
 
     .CodeMirror-linenumber {
       width: 4ch !important;
-      color: #6D8A88;
+      color: #6d8a88;
     }
 
     .CodeMirror-line {

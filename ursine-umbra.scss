@@ -30,6 +30,7 @@ $md-char-color: #5b5b5b !default;
 $meta-content-color: #757575 !default;
 $link-color: #6bcafb !default;
 $mark-color: #105fa2eb !default;
+$quote-color: #888e9c !default;
 $code-bg-color: #282a3660 !default;
 $code-border-color: #ffffff26 !default;
 $kbd-bg-color: #282a36 !default;
@@ -344,6 +345,7 @@ blockquote {
   position: relative;
   margin: 1rem 0 1rem 2rem;
   font-family: unquote($header-font);
+  color: $quote-color;
 
   &::before {
     content: '';

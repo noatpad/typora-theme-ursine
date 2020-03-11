@@ -105,8 +105,14 @@ sup.md-footnote {
 }
 
 // Quick open window
-#typora-quick-open * {
-  color: $sidebar-text-color;
+#typora-quick-open {
+  * {
+    color: $sidebar-text-color;
+  }
+
+  input {
+    color: $text-color;
+  }
 }
 
 // Windows Unibody sidebar

@@ -1276,7 +1276,7 @@ footer.ty-footer {
 
     &:hover {
       border-color: $primary-color;
-      background: $megamenu-hover-bg-color;
+      background: $megamenu-hover-bg-color !important;
       color: $item-hover-text-color;
     }
 

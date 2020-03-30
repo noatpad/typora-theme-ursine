@@ -1255,7 +1255,7 @@ footer.ty-footer {
     color: $megamenu-text-color;
     cursor: pointer;
 
-    &:hover {
+    &:not([disabled]):hover {
       background: $megamenu-hover-bg-color;
       color: inherit;
     }

@@ -8,12 +8,12 @@
 
 @if $umbra {
   .cm-s-inner {
-    padding: .5rem .2rem;
-    border: 1px solid var(--accent-color) !important;
+    padding: .25rem;
+    border: 1px solid $code-border-color !important;
     border-radius: .25rem;
 
     &.CodeMirror, .CodeMirror-gutters {
-      background-color: #282a36 !important;
+      background-color: $code-bg-color !important;
       color: #f8f8f2 !important;
       border: none;
     }

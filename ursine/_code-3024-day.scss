@@ -10,12 +10,12 @@
 
 @if not $umbra {
   .cm-s-inner {
-    padding: .5rem .2rem;
-    border: 1px solid $accent-color !important;
+    padding: .25rem;
+    border: 1px solid $code-border-color !important;
     border-radius: .25rem;
 
     &.CodeMirror, .CodeMirror-gutters {
-      background-color: #f7f7f7 !important;
+      background-color: $code-bg-color !important;
       color: #3a3432 !important;
       border: none;
     }

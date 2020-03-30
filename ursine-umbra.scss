@@ -74,7 +74,7 @@ $footer-hover-color: $sidebar-bg-color !default;
 // Megamenu colors
 $megamenu-bg-color: $sidebar-bg-color !default;
 $megamenu-text-color: $text-color !default;
-$megamenu-hover-bg-color: $item-hover-bg-color !default;
+$megamenu-hover-bg-color: #222 !default;
 $megamenu-active-bg-color: #181818 !default;
 $megamenu-sidebar-bg-color: $bg-color !default;
 $megamenu-sidebar-hover-bg-color: #161819 !default;
@@ -1255,7 +1255,7 @@ footer.ty-footer {
     color: $megamenu-text-color;
     cursor: pointer;
 
-    &:not([disabled]):hover {
+    &:not(.active):hover {
       background: $megamenu-hover-bg-color;
       color: inherit;
     }

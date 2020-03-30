@@ -10,19 +10,19 @@
 
 @if not $umbra {
   .cm-s-inner {
+    padding: .5rem .2rem;
     border: 1px solid $accent-color !important;
     border-radius: .25rem;
 
     &.CodeMirror, .CodeMirror-gutters {
       background-color: #f7f7f7 !important;
       color: #3a3432 !important;
+      border: none;
     }
 
     .CodeMirror-gutters {
       width: 5ch;
       color: #6d8a88;
-      background: #f0e6e0 !important;
-      border-right: 1px solid #807d7c9f;
     }
 
     .CodeMirror-cursor { border-left: solid thin #5c5855 !important; }

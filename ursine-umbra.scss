@@ -829,6 +829,10 @@ td, th {
     border-color: $primary-color;
   }
 
+  .ty-quick-open-category-list-inner {
+    position: relative;
+  }
+
   .ty-quick-open-category-title {
     height: auto;
     padding-top: 4px;
@@ -839,10 +843,18 @@ td, th {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-bottom: 2px;
     cursor: pointer;
 
     &:not(.active):hover {
       background: $active-search-item-bg-color;
+    }
+    &.active:before {
+        content: '⟩';
+        position: absolute;
+        left: 8px;
+        font-weight: bold;
+        padding-bottom: 5px;
     }
   }
 

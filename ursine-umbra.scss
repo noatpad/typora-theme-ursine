@@ -412,15 +412,11 @@ td, th {
     width: auto;
   }
 
-  // Disable default header symbol where applicable (h3-h6)
-  h3, h4, h5, h6 {
-    &::before { display: none; }
-  }
-
   // Headers
   h1, h2, h3, h4, h5, h6 {
-    &::after {
+    &::before {
       position: absolute;
+      left: auto;
       right: calc(100% + .75em);
       top: 0;
       color: $md-char-color;
@@ -434,7 +430,7 @@ td, th {
     font-size: 1.8rem;
     margin: 1rem 0;
 
-    &::after {
+    &::before {
       content: 'H1';
       top: .87rem;
     }
@@ -444,7 +440,7 @@ td, th {
     font-size: 1.4rem;
     margin: .7rem 0;
 
-    &::after {
+    &::before {
       content: 'H2';
       top: .43rem;
     }
@@ -454,7 +450,7 @@ td, th {
     font-size: 1.2rem;
     margin: .5rem 0;
 
-    &::after {
+    &::before {
       content: 'H3';
       top: .2rem;
     }
@@ -464,7 +460,7 @@ td, th {
     font-size: 1.1rem;
     margin: .2rem 0;
 
-    &::after {
+    &::before {
       content: 'H4';
       top: .07rem;
     }
@@ -475,12 +471,24 @@ td, th {
     margin: 0;
   }
 
-  h5::after {
+  h5::before {
     content: 'H5';
   }
 
-  h6::after {
+  h6::before {
     content: 'H6';
+  }
+
+  > h1.md-focus::before,
+  > h2.md-focus::before,
+  > h3.md-focus::before,
+  > h4.md-focus::before,
+  > h5.md-focus::before,
+  > h6.md-focus::before {
+    color: $meta-content-color;
+    padding: 0;
+    border: 0;
+    line-height: inherit;
   }
 
   // Lists

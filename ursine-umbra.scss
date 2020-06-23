@@ -466,8 +466,7 @@ td, th {
     }
   }
 
-  h5,
-  h6 {
+  h5, h6 {
     font-size: 1rem;
     margin: 0;
   }
@@ -480,18 +479,16 @@ td, th {
     content: 'H6';
   }
 
-  >h1.md-focus::before,
-  >h2.md-focus::before,
-  >h3.md-focus::before,
-  >h4.md-focus::before,
-  >h5.md-focus::before,
-  >h6.md-focus::before {
-    border: 1px solid;
-    border-radius: 3px;
-    float: left;
-    padding: 2px;
-    padding: 2px;
-    line-height: normal;
+  > h1.md-focus::before,
+  > h2.md-focus::before,
+  > h3.md-focus::before,
+  > h4.md-focus::before,
+  > h5.md-focus::before,
+  > h6.md-focus::before {
+    color: $meta-content-color;
+    padding: 0;
+    border: 0;
+    line-height: inherit;
   }
 
   // Lists

@@ -79,6 +79,8 @@ npm i
 gulp
 ```
 
+In order to run `gulp` command you need to have `gulp-cli` installed globally with `npm install --global gulp-cli`.
+
 The compiled CSS files will be located in the `/dist` directory once complete.
 
 Three is also a `dev` script that will watch the files and assets & update your themes in your themes folder directly as you save your changes. Simply run `gulp dev` to do so (and remember to reselect the theme in Typora afterwards to see the changes).

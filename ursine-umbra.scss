@@ -1321,8 +1321,7 @@ footer.ty-footer {
     position: static;
   }
 
-  &:first-child:not(:only-child)::before,
-  &:only-child::before {
+  &:only-child:empty::before {
     content: '';
     display: block;
     position: absolute;
@@ -1335,11 +1334,6 @@ footer.ty-footer {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    opacity: 0;
-  }
-
-  &:only-child:empty::before {
-    opacity: 1;
   }
 }
 

@@ -1344,5 +1344,16 @@ footer.ty-footer {
     ul > li {
       color: $text-color;
     }
+
+    // Fix for bold font in lists
+    ol, ul {
+      > li {
+        color: $text-color;
+
+        > strong > *, > b > * {
+          font-weight: bold;
+        }
+      }
+    }
   }
 }

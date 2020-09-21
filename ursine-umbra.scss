@@ -29,12 +29,12 @@ $text-color: #ddd !default;
 $md-char-color: #5b5b5b !default;
 $meta-content-color: #757575 !default;
 $link-color: #6bcafb !default;
-$mark-color: #105fa2eb !default;
+$mark-color: #107da2eb !default;
 $quote-color: #888e9c !default;
 $code-bg-color: #282a36 !default;
 $code-border-color: #ffffff26 !default;
 $kbd-bg-color: #282a36 !default;
-$selected-text-bg-color: #153b79 !default;
+$selected-text-bg-color: #285194 !default;
 
 // Button and table colors
 $primary-color: #428bca !default;
@@ -336,7 +336,7 @@ a { color: $link-color; }
 del { color: $md-char-color; }
 
 mark {
-  padding: 2px;
+  padding: 0 2px 2px;
   background: $mark-color;
   color: inherit;
 }

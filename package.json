@@ -19,6 +19,6 @@
     "gulp-zip": "^4.2.0",
     "merge-stream": "^1.0.1",
     "minimist": ">=1.2.2",
-    "node-sass": "^4.13.1"
+    "node-sass": "^7.0.0"
   }
 }
